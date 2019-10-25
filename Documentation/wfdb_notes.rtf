@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11905\paperh16837\margl1133\margr1133\margb1133\margt1133
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone Build: python Version: 3.7.3\
+	wfdb version: 2.2.1\
+\
+installation: $ pip install wfdb\
+\
+github repository of the wfdb package: {\field{\*\fldinst{HYPERLINK "https://github.com/MIT-LCP/wfdb-python"}}{\fldrslt \cf2 \ul \ulc2 https://github.com/MIT-LCP/wfdb-python}}\
+\
+documentation: {\field{\*\fldinst{HYPERLINK "https://wfdb.readthedocs.io/en/latest/"}}{\fldrslt \cf2 \ul \ulc2 https://wfdb.readthedocs.io/en/latest/}}\
+https://www.physionet.org/physiotools/wag/header-5.htm#toc\
+\
+Notes on how to use/implement the wfdb toolbox:\
+\
+Create a repository for alls patient records. Each record has its own folder named by a unique file identifier. Each folder contains at least two files, the .hea and the .dat file. The two files have to have the same name! The toolbox needs the name of the files to display and the repository they are in. \
+\
+A Python script is called from the C# application. It receives a range of variables like filename, channels to display etc\'85 from the C# application .The python script executes commands from the wfdb package and opens a window with a ECG-viewer.\
+\
+Python script for executing has to be made executable first: \
+- placed in a folder that is added to the system variable PATH\
+\pard\tx20\tx240\pardeftab720\li240\fi-240\partightenfactor0
+\ls1\ilvl0
+\fs26\fsmilli13200 \cf2 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone {\listtext	-	}
+\fs22 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone add a shebang on top of file \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+header file specifications: name, number of signals, sampling rate, number of signals}
