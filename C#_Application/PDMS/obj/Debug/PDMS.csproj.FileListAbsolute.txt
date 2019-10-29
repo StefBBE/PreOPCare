@@ -12,3 +12,16 @@ C:\Users\barta\Desktop\PDMS\PDMS\bin\Debug\PDMS.pdb
 C:\Users\barta\Desktop\PDMS\PDMS\obj\Debug\PDMS.CreatePatient.resources
 C:\Users\barta\Desktop\PDMS\PDMS\obj\Debug\PDMS.exe
 C:\Users\barta\Desktop\PDMS\PDMS\obj\Debug\PDMS.pdb
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\bin\Debug\PDMS.exe.config
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\bin\Debug\PDMS.exe
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\bin\Debug\PDMS.pdb
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.csprojAssemblyReference.cache
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.CreatePatient.resources
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.CreateUser.resources
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.Form1.resources
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.PatientInfo.resources
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.Properties.Resources.resources
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.SearchPatient.resources
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.csproj.GenerateResource.cache
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.exe
+C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.pdb
