@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{E067C942-E92A-4D23-B683-7CF4B3D663D6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PDMS/SQLConnector.cs">
+    <Files>
+      <File FileName="PDMS/ECG.cs" Line="85" Column="1" />
+      <File FileName="PDMS/SQLConnector.cs" Line="14" Column="16" />
+      <File FileName="PDMS/EmptyClass.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PDMS PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
