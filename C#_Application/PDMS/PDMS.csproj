@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="ECG.cs" />
     <Compile Include="SQLConnector.cs" />
+    <Compile Include="Patient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
