@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{E067C942-E92A-4D23-B683-7CF4B3D663D6}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="PDMS/Program.cs">
     <Files>
-      <File FileName="PDMS/ECG.cs" Line="7" Column="21" />
-      <File FileName="PDMS/SQLConnector.cs" Line="46" Column="44" />
+      <File FileName="PDMS/ECG.cs" Line="57" Column="34" />
+      <File FileName="PDMS/SQLConnector.cs" Line="57" Column="10" />
       <File FileName="PDMS/Patient.cs" Line="17" Column="169" />
-      <File FileName="PDMS/Program.cs" Line="1" Column="1" />
+      <File FileName="PDMS/Program.cs" Line="17" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
