@@ -42,8 +42,34 @@ namespace PDMS
                 Patient found = new Patient(0, "", "", "", "", "", false, 0, 0);
                 return found;
             }
-
         }
+
+            public string readhexcin()
+            {
+                try
+                {
+                    var client = new HttpClient();
+                    client.BaseAddress = new Uri("https://10.196.4.114/lanccr/v1/Labor%20(02:47:6d)/status");
+                    client.DefaultRequestHeaders.Add("User-Agent", "Anything");
+                    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                    HttpContent myJson = new StringContent("{}", Encoding.UTF8, "application/json");
+                    var response = client.PostAsync("", myJson).Result;
+                    response.EnsureSuccessStatusCode();
+                    String temp = response.Content.ReadAsStringAsync().Result;
+
+                    JObject MyObject = JObject.Parse(temp);
+                    JToken status = MyObject["status"];
+                    JToken cardData = status["cardData"];
+                    string MyCin = status["baseContact"]["cardData"]["cin"].ToString();
+                    HexConverter Hex = new HexConverter();
+                    return Hex.converter(MyCin);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Failed getting card id");
+                    return "";
+                }
+            }
         
     }
 }
