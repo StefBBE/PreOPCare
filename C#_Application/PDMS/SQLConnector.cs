@@ -3,7 +3,7 @@ using System.Data;
 using MySql.Data.MySqlClient;
 namespace PDMS
 {
-    public static partial class SQLConnector
+    public partial class SQLConnector
     {
         static string connectionString = "server=192.168.64.2;database=PDMS;uid=test;pwd=;";
 
