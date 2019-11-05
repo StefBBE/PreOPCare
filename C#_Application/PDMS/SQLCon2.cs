@@ -35,11 +35,11 @@ namespace PDMS
         }
         public Current LogInECard(int hexcid)
         {
+            string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             try
             {
-                string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
                 connection.Open();
                 Console.WriteLine("Connection Open!");
                 string query = String.Format("SELECT Role FROM Users WHERE EcardNumber=\'{0}\'", hexcid);
