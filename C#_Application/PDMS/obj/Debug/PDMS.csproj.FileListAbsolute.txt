@@ -59,3 +59,11 @@ C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\obj\Debug\PDMS.csproj.Genera
 C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\obj\Debug\PDMS.csproj.CopyComplete
 C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\obj\Debug\PDMS.exe
 C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\obj\Debug\PDMS.pdb
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\MySql.Data.dll
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.dll
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\MySQL.Data.EntityFrameworkCore.dll
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\MySql.Web.dll
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\Renci.SshNet.dll
+C:\Users\user\Source\Repos\PDMS\C#_Application\PDMS\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.xml

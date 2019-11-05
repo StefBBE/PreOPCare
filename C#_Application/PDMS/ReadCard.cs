@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PDMS
 {
-    class ReadCard
+    public class ReadCard
     {
 
         public Patient readpatient()
@@ -38,7 +38,7 @@ namespace PDMS
             }
             catch (Exception e)
             {
-                MessageBox.Show("Failed getting patient data");
+                MessageBox.Show(e.ToString());
                 Patient found = new Patient(0, "", "", "", "", "", false, 0, 0);
                 return found;
             }
@@ -66,7 +66,7 @@ namespace PDMS
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Failed getting card id");
+                    MessageBox.Show(e.ToString());
                     return "";
                 }
             }
