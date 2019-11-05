@@ -33,5 +33,35 @@ namespace PDMS
             }
             Console.ReadLine();
         }
+        public Current LogInECard(int hexcid)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+
+            try
+            {
+                string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
+                connection.Open();
+                Console.WriteLine("Connection Open!");
+                string query = String.Format("SELECT Role FROM Users WHERE EcardNumber=\'{0}\'", hexcid);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                rdr.Read();
+                int role = Convert.ToInt32(rdr[0]);
+                rdr.Close();
+                connection.Close();
+                Current cur = new Current();
+                cur.Hexcid = hexcid;
+                cur.Role = role;
+                return cur;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Connection failed");
+                Console.WriteLine(e.ToString());
+                Current cur = new Current();
+                return cur;
+            }
+        }
     }
 }

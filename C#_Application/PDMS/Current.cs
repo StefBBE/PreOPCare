@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace PDMS
 {
-    class Current
+    public class Current
     {
         private int role;
         public Patient curpat = new Patient();
-        private int userpatid;
+        private int hexcid;
 
         public int Role { get => role; set => role = value; }
-        public int Userpatid { get => userpatid; set => userpatid = value; }
+        public int Hexcid { get => hexcid; set => hexcid = value; }
         public void curpatid (int i) { curpat.PatientID = i; }
         public void curpatname(string i) { curpat.Name = i; }
         public void curpatsurname(string i) { curpat.Surname = i; }
