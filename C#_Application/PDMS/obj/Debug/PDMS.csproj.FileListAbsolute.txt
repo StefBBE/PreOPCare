@@ -25,3 +25,5 @@ C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.
 C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.csproj.GenerateResource.cache
 C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.exe
 C:\Users\Mariana\source\repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.pdb
+C:\Users\Mariana\Source\Repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.ECG.resources
+C:\Users\Mariana\Source\Repos\Mikdsatch\PDMS\C#_Application\PDMS\obj\Debug\PDMS.Login.resources
