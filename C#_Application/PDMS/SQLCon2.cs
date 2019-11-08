@@ -9,8 +9,9 @@ namespace PDMS
 {
     public partial class SQLConnector
     {
-        public void searchpatient(string a, string b)
+        public List<Patient> searchpatient(string a, string b)
         {
+            List<Patient> Patlist = new List<Patient>();
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string query = String.Format("SELECT * FROM PDMS.patients WHERE (Surname = '{0}' AND Name = '{1}')", b, a);
@@ -21,15 +22,18 @@ namespace PDMS
             {
                 while (myReader.Read())
                 {
-                    Console.WriteLine(myReader.GetString("Name") + " " + myReader.GetString("Surname") + " " + myReader.GetString("DateOfBirth") + " " + myReader.GetString("PatientID"));
+                    Patient bufpat = new Patient(myReader.GetInt32("PatientID"), myReader.GetString("Name"), myReader.GetString("Surname"), myReader.GetString("Medication"), myReader.GetString("SocialSecurity"), myReader.GetString("DateOfBirth"), myReader.GetBoolean("Sex"), myReader.GetFloat("Height"), myReader.GetFloat("Weight"), myReader.GetString("ECardNumber"));
+                    Patlist.Add(bufpat);
                 }
             }
             finally
             {
                 connection.Close();
             }
-            
+            return Patlist;
+
         }
+
         public Current LogInECard(int hexcid)
         {
             string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";

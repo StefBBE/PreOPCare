@@ -4,7 +4,7 @@ namespace PDMS
     public class Patient
     {
         int patientID;
-        string name, surname, medication, socialsecurity,date_of_birth;
+        string name, surname, medication, socialsecurity,date_of_birth, eCardNumber;
         bool sex;
         float height, weight;
 
@@ -14,13 +14,14 @@ namespace PDMS
         {
         }
 
-        public Patient(int patientID, string name, string surname, string medication, string socialsecurity, string date_of_birth, bool sex, float height, float weight)
+        public Patient(int patientID, string name, string surname, string medication, string socialsecurity, string date_of_birth, bool sex, float height, float weight, string eCardNumber)
         {
             PatientID = patientID;
             Name = name;
             Surname = surname;
             Medication = medication;
             Socialsecurity = socialsecurity;
+            ECardNumber = eCardNumber;
             Date_of_birth = date_of_birth;
             Sex = sex;
             Height = height;
@@ -45,5 +46,6 @@ namespace PDMS
         public string Medication { get => medication; set => medication = value; }
         public string Socialsecurity { get => socialsecurity; set => socialsecurity = value; }
         public string Date_of_birth { get => date_of_birth; set => date_of_birth = value; }
+        public string ECardNumber { get => eCardNumber; set => eCardNumber = value; }
     }
 }
