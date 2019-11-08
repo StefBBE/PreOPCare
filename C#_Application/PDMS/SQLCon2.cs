@@ -9,13 +9,17 @@ namespace PDMS
 {
     public partial class SQLConnector
     {
-        public void searchpatient()
+        public List<Patient> searchpatient(string a, string b)
         {
+<<<<<<< HEAD
             string a = Console.ReadLine();
-            string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
+            
+=======
+            List<Patient> Patlist = new List<Patient>();
+>>>>>>> dce820f852854dfa0b2bf32b3a3407e04f8b0c65
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            string query = String.Format("SELECT Name, Surname, Patient, PatientID FROM PDMS.patients WHERE Name = '{0}'", a);
+            string query = String.Format("SELECT * FROM PDMS.patients WHERE (Surname = '{0}' AND Name = '{1}')", b, a);
             MySqlCommand cmd = new MySqlCommand(query, connection);
             MySqlDataReader myReader;
             myReader = cmd.ExecuteReader();
@@ -23,16 +27,18 @@ namespace PDMS
             {
                 while (myReader.Read())
                 {
-                    Console.WriteLine(myReader.GetString("Name") + " " + myReader.GetString("Surname") + " " + myReader.GetString("PatientID"));
+                    Patient bufpat = new Patient(myReader.GetInt32("PatientID"), myReader.GetString("Name"), myReader.GetString("Surname"), myReader.GetString("Medication"), myReader.GetString("SocialSecurity"), myReader.GetString("DateOfBirth"), myReader.GetBoolean("Sex"), myReader.GetFloat("Height"), myReader.GetFloat("Weight"), myReader.GetString("ECardNumber"));
+                    Patlist.Add(bufpat);
                 }
             }
             finally
             {
-                Console.WriteLine("Worked!");
                 connection.Close();
             }
-            Console.ReadLine();
+            return Patlist;
+
         }
+
         public Current LogInECard(int hexcid)
         {
             string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
