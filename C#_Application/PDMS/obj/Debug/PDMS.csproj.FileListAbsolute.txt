@@ -71,15 +71,7 @@ M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\PDMS.exe.config
 M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\PDMS.exe
 M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\PDMS.pdb
 M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\Newtonsoft.Json.dll
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\Google.Protobuf.dll
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\BouncyCastle.Crypto.dll
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\Renci.SshNet.dll
 M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\Newtonsoft.Json.xml
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\MySql.Data.xml
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\MySql.Data.EntityFramework.xml
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.xml
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\MySQL.Data.EntityFrameworkCore.xml
-M:\PDMS\PDMS\C#_Application\PDMS\bin\Debug\MySql.Web.xml
 M:\PDMS\PDMS\C#_Application\PDMS\obj\Debug\PDMS.csprojAssemblyReference.cache
 M:\PDMS\PDMS\C#_Application\PDMS\obj\Debug\PDMS.exe.config
 M:\PDMS\PDMS\C#_Application\PDMS\obj\Debug\PDMS.CreatePatient.resources

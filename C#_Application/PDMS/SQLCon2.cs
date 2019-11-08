@@ -12,7 +12,7 @@ namespace PDMS
         public void searchpatient()
         {
             string a = Console.ReadLine();
-            string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
+            
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string query = String.Format("SELECT Name, Surname, Patient, PatientID FROM PDMS.patients WHERE Name = '{0}'", a);
