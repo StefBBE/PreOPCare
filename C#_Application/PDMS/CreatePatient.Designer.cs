@@ -41,7 +41,7 @@ namespace PDMS
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-           // this.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
@@ -142,8 +142,6 @@ namespace PDMS
             // 
             // CreatePatient
             // 
-
-            
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -156,7 +154,6 @@ namespace PDMS
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            
 
         }
 
