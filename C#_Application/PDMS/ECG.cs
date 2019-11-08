@@ -12,8 +12,6 @@ namespace PDMS
 {
     public partial class ECG : Form
     {
-        bool isMenu1PanelOpen = false;
-
         public ECG()
         {
             InitializeComponent();
@@ -28,36 +26,32 @@ namespace PDMS
         {
 
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (isMenu1PanelOpen)
-            {
-                panel3.Height -= 20;
-                if (panel3.Height == 10)
-                {
-                    timer1.Stop();
-                    isMenu1PanelOpen = false;
-                }
-
-            }
-            else if (isMenu1PanelOpen)
-            {
-                panel3.Height += 20;
-                if (panel3.Height == 120)
-                {
-                    timer1.Stop();
-                    isMenu1PanelOpen = true;
-                }
-            }
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
