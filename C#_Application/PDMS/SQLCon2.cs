@@ -9,13 +9,11 @@ namespace PDMS
 {
     public partial class SQLConnector
     {
-        public void searchpatient()
+        public void searchpatient(string a, string b)
         {
-            string a = Console.ReadLine();
-            string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            string query = String.Format("SELECT Name, Surname, Patient, PatientID FROM PDMS.patients WHERE Name = '{0}'", a);
+            string query = String.Format("SELECT * FROM PDMS.patients WHERE (Surname = '{0}' AND Name = '{1}')", b, a);
             MySqlCommand cmd = new MySqlCommand(query, connection);
             MySqlDataReader myReader;
             myReader = cmd.ExecuteReader();
@@ -23,15 +21,14 @@ namespace PDMS
             {
                 while (myReader.Read())
                 {
-                    Console.WriteLine(myReader.GetString("Name") + " " + myReader.GetString("Surname") + " " + myReader.GetString("PatientID"));
+                    Console.WriteLine(myReader.GetString("Name") + " " + myReader.GetString("Surname") + " " + myReader.GetString("DateOfBirth") + " " + myReader.GetString("PatientID"));
                 }
             }
             finally
             {
-                Console.WriteLine("Worked!");
                 connection.Close();
             }
-            Console.ReadLine();
+            
         }
         public Current LogInECard(int hexcid)
         {
