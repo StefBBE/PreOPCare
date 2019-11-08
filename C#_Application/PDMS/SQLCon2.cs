@@ -11,12 +11,7 @@ namespace PDMS
     {
         public List<Patient> searchpatient(string a, string b)
         {
-<<<<<<< HEAD
-            string a = Console.ReadLine();
-            
-=======
             List<Patient> Patlist = new List<Patient>();
->>>>>>> dce820f852854dfa0b2bf32b3a3407e04f8b0c65
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string query = String.Format("SELECT * FROM PDMS.patients WHERE (Surname = '{0}' AND Name = '{1}')", b, a);
