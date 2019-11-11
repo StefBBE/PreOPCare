@@ -4,6 +4,13 @@
 
 ##
 
+C#Application/PDMS/bin
+C#Application/PDMS/obj
+C#Application/PDMS/.vs
+
+
+
+
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Mac specific file 
@@ -593,6 +600,7 @@ _Pvt_Extensions
 .paket/paket.exe
 
 paket-files/
+
 
 
 
