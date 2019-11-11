@@ -28,7 +28,6 @@ namespace PDMS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.VerticalMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -37,9 +36,16 @@ namespace PDMS
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ContainerPanel = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MaximizeIcon = new System.Windows.Forms.PictureBox();
+            this.MinimizeIcon = new System.Windows.Forms.PictureBox();
+            this.CloseIcon = new System.Windows.Forms.PictureBox();
+            this.RestoreDonwIcon = new System.Windows.Forms.PictureBox();
             this.VerticalMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaximizeIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestoreDonwIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // VerticalMenu
@@ -133,7 +139,8 @@ namespace PDMS
             // 
             // ContainerPanel
             // 
-            this.ContainerPanel.BackColor = System.Drawing.Color.Plum;
+            this.ContainerPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ContainerPanel.BackColor = System.Drawing.Color.Transparent;
             this.ContainerPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContainerPanel.BackgroundImage")));
             this.ContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContainerPanel.Location = new System.Drawing.Point(250, 0);
@@ -141,12 +148,54 @@ namespace PDMS
             this.ContainerPanel.Size = new System.Drawing.Size(890, 628);
             this.ContainerPanel.TabIndex = 1;
             // 
-            // contextMenuStrip1
+            // MaximizeIcon
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.MaximizeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaximizeIcon.BackColor = System.Drawing.Color.Transparent;
+            this.MaximizeIcon.Image = ((System.Drawing.Image)(resources.GetObject("MaximizeIcon.Image")));
+            this.MaximizeIcon.Location = new System.Drawing.Point(837, 12);
+            this.MaximizeIcon.Name = "MaximizeIcon";
+            this.MaximizeIcon.Size = new System.Drawing.Size(17, 19);
+            this.MaximizeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MaximizeIcon.TabIndex = 10;
+            this.MaximizeIcon.TabStop = false;
+            // 
+            // MinimizeIcon
+            // 
+            this.MinimizeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MinimizeIcon.BackColor = System.Drawing.Color.Transparent;
+            this.MinimizeIcon.Image = ((System.Drawing.Image)(resources.GetObject("MinimizeIcon.Image")));
+            this.MinimizeIcon.Location = new System.Drawing.Point(814, 12);
+            this.MinimizeIcon.Name = "MinimizeIcon";
+            this.MinimizeIcon.Size = new System.Drawing.Size(17, 19);
+            this.MinimizeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MinimizeIcon.TabIndex = 8;
+            this.MinimizeIcon.TabStop = false;
+            // 
+            // CloseIcon
+            // 
+            this.CloseIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloseIcon.BackColor = System.Drawing.Color.Transparent;
+            this.CloseIcon.Image = ((System.Drawing.Image)(resources.GetObject("CloseIcon.Image")));
+            this.CloseIcon.Location = new System.Drawing.Point(860, 12);
+            this.CloseIcon.Name = "CloseIcon";
+            this.CloseIcon.Size = new System.Drawing.Size(17, 19);
+            this.CloseIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CloseIcon.TabIndex = 9;
+            this.CloseIcon.TabStop = false;
+            // 
+            // RestoreDonwIcon
+            // 
+            this.RestoreDonwIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RestoreDonwIcon.BackColor = System.Drawing.Color.Transparent;
+            this.RestoreDonwIcon.Image = ((System.Drawing.Image)(resources.GetObject("RestoreDonwIcon.Image")));
+            this.RestoreDonwIcon.Location = new System.Drawing.Point(837, 12);
+            this.RestoreDonwIcon.Name = "RestoreDonwIcon";
+            this.RestoreDonwIcon.Size = new System.Drawing.Size(17, 19);
+            this.RestoreDonwIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RestoreDonwIcon.TabIndex = 11;
+            this.RestoreDonwIcon.TabStop = false;
+            this.RestoreDonwIcon.Visible = false;
             // 
             // Form1
             // 
@@ -161,6 +210,10 @@ namespace PDMS
             this.Text = "Form1";
             this.VerticalMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaximizeIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestoreDonwIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,6 +227,9 @@ namespace PDMS
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel ContainerPanel;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.PictureBox MaximizeIcon;
+        private System.Windows.Forms.PictureBox MinimizeIcon;
+        private System.Windows.Forms.PictureBox CloseIcon;
+        private System.Windows.Forms.PictureBox RestoreDonwIcon;
     }
 }

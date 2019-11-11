@@ -6,11 +6,14 @@ namespace PDMS
 {
     public class ECG
     {
+
+
       string ecgfile; // variable holding path to ecgfile
         int sampfrom, sampto; //variables giving details on what channels to display, and  from where to where to display
         string[] channels;
 
         public int Sampfrom
+
         {
             get { return sampfrom; }
             set
@@ -38,8 +41,10 @@ namespace PDMS
 
 
 
+
         public ECG() // empty constructor
         {
+
         }
         public ECG(string ecgfile, string[] channels, int sampfrom, int sampto) //constructor 
         {
@@ -50,6 +55,7 @@ namespace PDMS
             this.sampto = Sampto;
 
         }
+
 
 
 
@@ -71,6 +77,7 @@ namespace PDMS
                 //What to do now?
                 //set values  to zero? abort?
             }
+
 
         }
 
