@@ -11,8 +11,12 @@ namespace PDMS
     {
         public void searchpatient()
         {
+<<<<<<< Updated upstream
             string a = Console.ReadLine();
             string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
+=======
+            List<Patient> Patlist = new List<Patient>();
+>>>>>>> Stashed changes
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string query = String.Format("SELECT Name, Surname, Patient, PatientID FROM PDMS.patients WHERE Name = '{0}'", a);
