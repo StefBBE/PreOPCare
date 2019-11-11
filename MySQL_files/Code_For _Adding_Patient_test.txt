@@ -1,0 +1,2 @@
+Patient patient = new Patient(4,"Thomas","Musterpatient","Schwere Depressionen und braucht Lithium","4276238734","19-23-1955",false,2.1F,80.6F);
+            SQLConnector.SavePatient(patient);

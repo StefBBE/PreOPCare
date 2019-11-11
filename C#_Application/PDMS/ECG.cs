@@ -1,59 +1,86 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-
 namespace PDMS
 {
-    public partial class ECG : Form
+    public class ECG
     {
-        public ECG()
+
+
+      string ecgfile; // variable holding path to ecgfile
+        int sampfrom, sampto; //variables giving details on what channels to display, and  from where to where to display
+        string[] channels;
+
+        public int Sampfrom
+
         {
-            InitializeComponent();
+            get { return sampfrom; }
+            set
+            {
+                if (value > 0)
+                {
+                    sampfrom = value;
+                }
+                else { throw new System.ArgumentOutOfRangeException(); }
+            }
         }
 
-        private void ECG_Load(object sender, EventArgs e)
+        public int Sampto
         {
-
+            get { return sampto; }
+            set
+            {
+                if (value > 0)
+                {
+                    sampto = value;
+                }
+                else { throw new System.ArgumentOutOfRangeException(); }
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        public ECG() // empty constructor
         {
 
         }
+        public ECG(string ecgfile, string[] channels, int sampfrom, int sampto) //constructor 
+        {
+
+            this.ecgfile = ecgfile;
+            this.channels = channels;
+            this.sampfrom = Sampfrom;
+            this.sampto = Sampto;
+
+        }
+
+
+
+
+
+        public static void Display(string ecgfile, string[] channels, int sampfrom, int sampto)
+        {
+
+            try
+            {
+                string fileName = "/Library/Frameworks/Python.framework/Versions/3.7/bin/wfdbscript.py";
+                string arguments = string.Format("{0} {1} {2} {3}", ecgfile, String.Join(",", channels), sampfrom, sampto); // arguments to pass to the pythonscript
+                Process proc = new Process();
+                proc.StartInfo = new ProcessStartInfo(fileName, arguments); //starting the pythonscript and handing over arguments 
+                proc.StartInfo.CreateNoWindow = true;
+                proc.Start();
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                //What to do now?
+                //set values  to zero? abort?
+            }
+
+
+        }
+
     }
 }
+
