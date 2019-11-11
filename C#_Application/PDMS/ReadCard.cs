@@ -33,13 +33,13 @@ namespace PDMS
                 string MySvNr = status["baseContact"]["cardData"]["nummer"].ToString();
                 bool sex = false;
                 if (MyGeschlecht == "M") { sex = true; }
-                Patient found = new Patient(0, MyVorname, MyNachname, "", MySvNr, MyGeburtsdatum, sex, 0, 0);
+                Patient found = new Patient(0, MyVorname, MyNachname, "", MySvNr, MyGeburtsdatum, sex, 0, 0,MyCin);
                 return found;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
-                Patient found = new Patient(0, "", "", "", "", "", false, 0, 0);
+                Patient found = new Patient(0, "", "", "", "", "", false, 0, 0,"");
                 return found;
             }
         }
