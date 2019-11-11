@@ -6,11 +6,14 @@ namespace PDMS
 {
     public class ECG
     {
-        string ecgfile; // variable holding path to ecgfile
-        private int sampfrom, sampto; //variables giving details on what channels to display, and  from where to where to display
+
+
+      string ecgfile; // variable holding path to ecgfile
+        int sampfrom, sampto; //variables giving details on what channels to display, and  from where to where to display
         string[] channels;
 
         public int Sampfrom
+
         {
             get { return sampfrom; }
             set
@@ -38,8 +41,10 @@ namespace PDMS
 
 
 
+
         public ECG() // empty constructor
         {
+
         }
         public ECG(string ecgfile, string[] channels, int sampfrom, int sampto) //constructor 
         {
@@ -54,17 +59,12 @@ namespace PDMS
 
 
 
-        public void Display(string ecgfile, string[] channels, int sampfrom, int sampto)
+
+        public static void Display(string ecgfile, string[] channels, int sampfrom, int sampto)
         {
 
             try
             {
-
-                this.ecgfile = ecgfile;
-                this.channels = channels;
-                this.sampfrom = sampfrom;
-                this.sampto = sampto;
-
                 string fileName = "/Library/Frameworks/Python.framework/Versions/3.7/bin/wfdbscript.py";
                 string arguments = string.Format("{0} {1} {2} {3}", ecgfile, String.Join(",", channels), sampfrom, sampto); // arguments to pass to the pythonscript
                 Process proc = new Process();
@@ -77,6 +77,7 @@ namespace PDMS
                 //What to do now?
                 //set values  to zero? abort?
             }
+
 
         }
 
