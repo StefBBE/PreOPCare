@@ -37,7 +37,7 @@ namespace PDMS
 
         }
 
-        public Current LogInECard(int hexcid)
+        public Current LogInECard(string hexcid)
         {
             string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
             MySqlConnection connection = new MySqlConnection(connectionString);
