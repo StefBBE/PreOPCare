@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace PDMS
 {
     public class Patient
@@ -8,8 +10,11 @@ namespace PDMS
         string name, surname, medication, socialsecurity,date_of_birth,ecardnumber;
 
         bool sex;
+
         float height, weight;
 
+        public static List<String> malelist = new List<string> { "M", "m", "male", "Male" };
+        public static List<String> femalelist = new List<string> { "F", "f", "female", "Female" };
 
 
         public Patient()
@@ -30,16 +35,7 @@ namespace PDMS
             Sex = sex;
             Height = height;
             Weight = weight;
-            PatientID = patientID;
-            Sex = sex;
-            Height = height;
-            Weight = weight;
-            Name = name;
-            Surname = surname;
-            Medication = medication;
-            Socialsecurity = socialsecurity;
-            Date_of_birth = date_of_birth;
-            Ecardnumber = ecardnumber;
+            
         }
 
         public int PatientID { get => patientID; set => patientID = value; }
