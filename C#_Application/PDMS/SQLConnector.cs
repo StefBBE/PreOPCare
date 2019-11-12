@@ -56,6 +56,7 @@ namespace PDMS
             {
                 Console.WriteLine("Connection failed");
                 Console.WriteLine(e.ToString());
+                throw e;
 
             }
         }

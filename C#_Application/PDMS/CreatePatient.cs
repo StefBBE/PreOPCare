@@ -32,45 +32,39 @@ namespace PDMS
             {
                 e.Handled = true;
             }
-            
+
         }
 
-        
+
 
         private void Save_Button_OnClick(object sender, EventArgs e)
         {
 
-             
+
             try
             {
-                string allowed_date_Format ="dd.MM.yyyy"; // see if date is entered correctly
-                DateTime dateofbirthstring;
 
-                bool validDate = DateTime.TryParseExact(
-                    this.textBox_dateofbirth.Text,
-                    allowed_date_Format,
-                    DateTimeFormatInfo.InvariantInfo,
-                    DateTimeStyles.None,
-                    out dateofbirthstring);
+                if (this.textBox_name.Text == "" || this.textBox_surname.Text == "")
+                {
+                    throw new PDMS_Exception.NoNameException();
+                }
 
-                if (!validDate)
+                if (!PDMS_Exception.ValidateDate(this.textBox_dateofbirth)) // is date entered correctly
                 {
                     throw new PDMS_Exception.InvalidDateException();
                 }
-                 
 
+                // check if gender is male(true) or female (false)
                 bool sex = false;
                 if (Patient.malelist.Contains(this.textBox_gender.Text)) { sex = true; }
-                // check if gender is male(true) or female (false)
                 else if (Patient.femalelist.Contains(this.textBox_gender.Text)) { sex = false; }
-
-                else
-                {
-                    throw new PDMS_Exception.InvalidGenderException();
-                }
+                else{throw new PDMS_Exception.InvalidGenderException(); }
 
                 Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", "0000031", this.textBox_dateofbirth.Text, sex, 0f, 0f, "0331");
                 SQLConnector.SavePatient(patient);
+                MessageBox.Show("Patient Saved!", "Success!",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
 
             catch (PDMS_Exception.InvalidGenderException)
@@ -85,6 +79,24 @@ namespace PDMS
                 return;
             }
 
+            catch (PDMS_Exception.NoNameException)
+            {
+                PDMS_Exception.NoNameException.ErrorMessage();
+                return;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                //show custom message?
+                /*
+                if (ex.Message.StartsWith("Duplicate"))
+                {
+                    MessageBox.Show("Entry already exists in database!", "SQL Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }*/
+                //sql message
+                MessageBox.Show(ex.Message, "SQL Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
 
