@@ -82,6 +82,7 @@ namespace PDMS
             this.textBox_dateofbirth.Name = "textBox11";
             this.textBox_dateofbirth.Size = new System.Drawing.Size(251, 32);
             this.textBox_dateofbirth.TabIndex = 52;
+            this.textBox_dateofbirth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateofbirth_keypress);
             // 
             // textBox7
             // 
