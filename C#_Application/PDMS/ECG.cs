@@ -60,13 +60,13 @@ namespace PDMS
 
 
 
-        public static void Display(string ecgfile, string[] channels, int sampfrom, int sampto)
+        public static void Display(ECG ecg)
         {
 
             try
             {
                 string fileName = "/Library/Frameworks/Python.framework/Versions/3.7/bin/wfdbscript.py";
-                string arguments = string.Format("{0} {1} {2} {3}", ecgfile, String.Join(",", channels), sampfrom, sampto); // arguments to pass to the pythonscript
+                string arguments = string.Format("{0} {1} {2} {3}", ecg.ecgfile, String.Join(",", ecg.channels), ecg.sampfrom, ecg.sampto); // arguments to pass to the pythonscript
                 Process proc = new Process();
                 proc.StartInfo = new ProcessStartInfo(fileName, arguments); //starting the pythonscript and handing over arguments 
                 proc.StartInfo.CreateNoWindow = true;

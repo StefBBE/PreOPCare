@@ -43,8 +43,8 @@ namespace PDMS
                 Console.WriteLine("Connection Open!");
 
                
-                // with ecard number string query = String.Format("INSERT INTO PDMS.Patients (Name,Surname,DateOfBirth,SocialSecurity,Sex,Medication,Height,Weight,EcardNumber) VALUES (\'{0}\',\'{1}\',\'{2}\',\'{3}\',{4},\'{5}\',\'{6}\',\'{7}\',\'{8}\')", patient.Name, patient.Surname, patient.Date_of_birth, patient.Socialsecurity, patient.Sex, patient.Medication, patient.Height, patient.Weight,patient.Ecardnumber);
-                string query = String.Format("INSERT INTO PDMS.Patients (Name,Surname,DateOfBirth,SocialSecurity,Sex,Medication,Height,Weight) VALUES (\'{0}\',\'{1}\',\'{2}\',\'{3}\',{4},\'{5}\',\'{6}\',\'{7}\')", patient.Name, patient.Surname, patient.Date_of_birth, patient.Socialsecurity, patient.Sex, patient.Medication, patient.Height, patient.Weight);
+               string query = String.Format("INSERT INTO PDMS.Patients (Name,Surname,DateOfBirth,SocialSecurity,Sex,Medication,Height,Weight,EcardNumber) VALUES (\'{0}\',\'{1}\',\'{2}\',\'{3}\',{4},\'{5}\',\'{6}\',\'{7}\',\'{8}\')", patient.Name, patient.Surname, patient.Date_of_birth, patient.Socialsecurity, patient.Sex, patient.Medication, patient.Height, patient.Weight,patient.Ecardnumber);
+              
                 
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);

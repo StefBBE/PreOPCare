@@ -20,8 +20,8 @@ namespace PDMS
         
         private void Save_Button_OnClick(object sender, EventArgs e)
         {
-            /* implement when more fields of the UI are ready
-         * 
+            /*
+             * implement when UI is finished 
             bool sex = false;
             if (Patient.malelist.Contains(this.textBox_gender.Text)) {sex = true; }
             // check if gender is male(true) or female (false)
@@ -33,6 +33,7 @@ namespace PDMS
             Patient patient = new Patient(0,this.textBox_name.Text,this.textBox_surname.Text,"","0000031",this.textBox_dateofbirth.Text,sex, 0f,0f,"0331");
             SQLConnector.SavePatient(patient);
             */
+            
         }
     }
     }
