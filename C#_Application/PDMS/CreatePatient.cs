@@ -43,7 +43,7 @@ namespace PDMS
 
             try
             {
-
+                // check for empty field!!
                 if (this.textBox_name.Text == "" || this.textBox_surname.Text == "")
                 {
                     throw new PDMS_Exception.NoNameException();
