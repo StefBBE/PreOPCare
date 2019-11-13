@@ -16,6 +16,10 @@ namespace PDMS
         {
             InitializeComponent();
         }
+        //test code
+        Current cur = new Current();
+        //end test code
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -40,7 +44,7 @@ namespace PDMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFormInPanel(new PatientInfo());
+            OpenFormInPanel(new PatientInfo(cur));
         }
 
         private void button2_Click(object sender, EventArgs e)
