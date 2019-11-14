@@ -2,6 +2,7 @@
 {
     partial class ECG
     {
+        /*
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -160,7 +161,7 @@
             // 
             // ECG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            /*this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(890, 628);
@@ -171,10 +172,10 @@
             this.Load += new System.EventHandler(this.ECG_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.ResumeLayout(false);
+            this.ResumeLayout(false);*/
 
         }
-
+        /*
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox5;
@@ -186,5 +187,5 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        */
     }
-}
