@@ -22,12 +22,12 @@ namespace PDMS
             //while (cur.curpatnameg() == "no Patient")
             //{
             bool brk = false;
-            while (cur.curpatnameg() == "no Patient" && !brk) 
+            while ((cur.curpatnameg() == "no Patient"|| cur.curpatnameg() == "") && !brk) 
             {
                 cur.curpat = rc.readpatient();
-                if (cur.curpatnameg() == "no Patient")
+                if (cur.curpatnameg() == "no Patient" || cur.curpatnameg() == "")
                 {
-                    const string message ="Card not found. Try again (Yes) or Cancel (No)";
+                    const string message ="Card can't be read. Try again (Yes) or Cancel (No)";
                     const string caption = "Form Closing";
                     var result = MessageBox.Show(message, caption,
                                                  MessageBoxButtons.YesNo,
