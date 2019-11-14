@@ -30,6 +30,7 @@ namespace PDMS
             else VerticalMenu.Width = 250;
 
         }
+
         private void OpenFormInPanel(Object Formhijo)
         {
             if (this.ContainerPanel.Controls.Count > 0)
@@ -60,6 +61,11 @@ namespace PDMS
         private void button4_Click(object sender, EventArgs e)
         {
             OpenFormInPanel(new CreateUser());
+        }
+
+        private void ContainerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

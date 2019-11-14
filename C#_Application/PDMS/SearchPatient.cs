@@ -17,9 +17,31 @@ namespace PDMS
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            listBox1.SelectedItems.Clear();
+            for (int i=listBox1.Items.Count - 1;i >= 0;i--)
+            {
+                if (listBox1.Items[i].ToString().ToLower().Contains(txt_search.Text.ToLower()))
+                {
+                    listBox1.SetSelected(i,true); 
+                }
+            }
+            label1.Text = listBox1.SelectedItems.Count.ToString() + " items found";
 
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            listBox1.SelectedItems.Clear();
+            for (int i = listBox1.Items.Count - 1; i >= 0; i--)
+            {
+                if (listBox1.Items[i].ToString().ToLower().Contains(txt_search.Text.ToLower())) 
+                {
+                    listBox1.SetSelected(i, true);
+                }
+            }
+            label1.Text = listBox1.SelectedItems.Count.ToString() + " items found";
         }
     }
 }

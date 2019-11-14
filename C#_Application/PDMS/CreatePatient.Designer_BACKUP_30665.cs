@@ -76,7 +76,6 @@ namespace PDMS
             this.textBox_dateofbirth.Name = "textBox11";
             this.textBox_dateofbirth.Size = new System.Drawing.Size(251, 32);
             this.textBox_dateofbirth.TabIndex = 52;
-            this.textBox_dateofbirth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateofbirth_keypress);
             // 
             // textBox7
             // 
@@ -98,7 +97,15 @@ namespace PDMS
             // 
             // textBox12
             // 
-
+<<<<<<< HEAD
+            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox12.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBox12.Location = new System.Drawing.Point(150, 80);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(251, 23);
+            this.textBox12.TabIndex = 47;
+=======
             this.textBox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
             this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -106,7 +113,7 @@ namespace PDMS
             this.textBox_name.Name = "textBox12";
             this.textBox_name.Size = new System.Drawing.Size(251, 32);
             this.textBox_name.TabIndex = 47;
-
+>>>>>>> merge2
             // 
             // label6
             // 
