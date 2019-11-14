@@ -56,6 +56,7 @@ namespace PDMS
             {
                 Console.WriteLine("Connection failed");
                 Console.WriteLine(e.ToString());
+                throw e;
 
             }
         }
@@ -69,7 +70,7 @@ namespace PDMS
                 connection.Open();
                 Console.WriteLine("Connection Open!");
 
-                string query = String.Format("INSERT INTO PDMS.users (Name,Surname,Username,Password,EcardNumber,IDCardNumber,Role,Permitted) VALUES (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\',\'{6}\',\'{7}\')", user.Name, user.Surname, user.Username, user.Password, user.Ecardnumber, user.Idcardnumber, user.Role, user.Permitted);
+                string query = String.Format("INSERT INTO PDMS.users (Name,Surname,Username,Password,EcardNumber,IDCardNumber,Role,Permitted) VALUES (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\',\'{6}\',{7})", user.Name, user.Surname, user.Username, user.Password, user.Ecardnumber, user.Idcardnumber, user.Role, user.Permitted);
                
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
