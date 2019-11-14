@@ -28,7 +28,7 @@ namespace PDMS
                 if (cur.curpatnameg() == "no Patient" || cur.curpatnameg() == "")
                 {
                     const string message ="Card can't be read. Try again (Yes) or Cancel (No)";
-                    const string caption = "Form Closing";
+                    const string caption = "Ecard Problem";
                     var result = MessageBox.Show(message, caption,
                                                  MessageBoxButtons.YesNo,
                                                  MessageBoxIcon.Question);
