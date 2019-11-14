@@ -22,7 +22,7 @@ namespace PDMS
             listBox1.SelectedItems.Clear();
             for (int i=listBox1.Items.Count - 1;i >= 0;i--)
             {
-                if (listBox1.Items[i].ToString().ToLower().Contains(txt_search.Text.ToLower())) ;
+                if (listBox1.Items[i].ToString().ToLower().Contains(txt_search.Text.ToLower()))
                 {
                     listBox1.SetSelected(i,true); 
                 }

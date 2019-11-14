@@ -36,11 +36,7 @@ namespace PDMS
             this.panel1.Tag = fh;
             fh.Show();
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenFormInPatientInfo(new ECG());
 
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

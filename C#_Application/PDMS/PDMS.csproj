@@ -144,6 +144,9 @@
     <Compile Include="SQLCon2.cs" />
     <Compile Include="SQLConnector.cs" />
     <Compile Include="Patient.cs" />
+    <None Include="Login.resx" />
+    <Compile Include="Login.cs" />
+    <Compile Include="Login.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

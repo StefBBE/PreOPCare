@@ -274,7 +274,7 @@ namespace PDMS
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatientInfo";
             this.Text = "PatientInfo";
-            this.Load += new System.EventHandler(this.PatientInfo_Load);
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
