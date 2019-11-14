@@ -2,7 +2,7 @@
 {
     partial class ECG
     {
-        /*
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -61,7 +61,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(890, 98);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            
             // 
             // textBox2
             // 
@@ -107,7 +107,7 @@
             this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Start Time";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // label1
             // 
@@ -118,7 +118,7 @@
             this.label1.Size = new System.Drawing.Size(116, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Patient\'s ECGs";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // comboBox1
             // 
@@ -161,7 +161,7 @@
             // 
             // ECG
             // 
-            /*this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(890, 628);
@@ -172,10 +172,10 @@
             this.Load += new System.EventHandler(this.ECG_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.ResumeLayout(false);*/
+            this.ResumeLayout(false);
 
         }
-        /*
+        
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox5;
@@ -187,5 +187,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        */
+        
     }
+ }

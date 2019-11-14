@@ -69,11 +69,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="PatinfoLoader.cs" />
-
     <Compile Include="PDMS_Exception.cs" />
-
     <Compile Include="User.cs" />
     <Compile Include="CreatePatient.cs">
       <SubType>Form</SubType>
@@ -151,10 +148,19 @@
     <Compile Include="SQLConnector.cs" />
     <Compile Include="Patient.cs" />
     <None Include="Login.resx" />
-    <Compile Include="Login.cs" />
-    <Compile Include="Login.Designer.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <None Include="ECG.resx" />
-    <Compile Include="ECG.Designer.cs" />
+    <Compile Include="ECG.cs">
+    <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECG.Designer.cs">
+      <DependentUpon>ECG.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
