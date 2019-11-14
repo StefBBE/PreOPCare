@@ -8,15 +8,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PDMS
 {
     public partial class PatientInfo : Form
     {
-        Current cur = new Current();
+        ReadCard rc = new ReadCard();
+
         public PatientInfo(Current cur)
         {
             //test code
-            this.cur = cur;
+            //this.cur = cur;
+            //while (cur.curpatnameg() == "no Patient")
+            //{
+            bool brk = false;
+            while (cur.curpatnameg() == "no Patient" && !brk) 
+            {
+                cur.curpat = rc.readpatient();
+                if (cur.curpatnameg() == "no Patient")
+                {
+                    const string message ="Card not found. Try again (Yes) or Cancel (No)";
+                    const string caption = "Form Closing";
+                    var result = MessageBox.Show(message, caption,
+                                                 MessageBoxButtons.YesNo,
+                                                 MessageBoxIcon.Question);
+
+                    // If the no button was pressed ...
+                    if (result == DialogResult.No)
+                    {
+                        // cancel the closure of the form.
+                        brk=true;
+                    }
+                }
+            }
+            
+          
+            
+            //}
             //end test code
 
             InitializeComponent();

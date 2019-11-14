@@ -8,10 +8,10 @@ namespace PDMS
 {
     public class Current
     {
-        private int role;
+        private static int role;
         public Patient curpat = new Patient();
-        private string hexcid;
-
+        private static string hexcid;
+        
         public Current()
         {
             curpat.PatientID = 0;
