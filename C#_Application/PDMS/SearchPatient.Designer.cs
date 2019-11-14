@@ -29,105 +29,71 @@ namespace PDMS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchPatient));
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.MaximizeIcon = new System.Windows.Forms.PictureBox();
-            this.MinimizeIcon = new System.Windows.Forms.PictureBox();
-            this.CloseIcon = new System.Windows.Forms.PictureBox();
-            this.RestoreDonwIcon = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.MaximizeIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MinimizeIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RestoreDonwIcon)).BeginInit();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_search = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // listBox1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(129)))), ((int)(((byte)(133)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.Location = new System.Drawing.Point(555, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 38);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.DropDownHeight = 500;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 20;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Mariana Afonso",
-            "Mariana Rocha",
-            "Mariana Ferreira",
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Items.AddRange(new object[] {
+            "Laura Lucendo",
+            "Laura Maranes",
             "Mariana Rodrigues",
-            "Laura Rodrigues",
-            "Laura Pires"});
-            this.comboBox1.Location = new System.Drawing.Point(182, 306);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(354, 28);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            "Mariana Perez",
+            "Stephan Sauerman",
+            "Michael Shif",
+            "Stephan Martines",
+            "Michael Gruber"});
+            this.listBox1.Location = new System.Drawing.Point(189, 197);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBox1.Size = new System.Drawing.Size(512, 252);
+            this.listBox1.TabIndex = 12;
             // 
-            // MaximizeIcon
+            // txt_search
             // 
-            this.MaximizeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaximizeIcon.BackColor = System.Drawing.Color.Transparent;
-            this.MaximizeIcon.Image = ((System.Drawing.Image)(resources.GetObject("MaximizeIcon.Image")));
-            this.MaximizeIcon.Location = new System.Drawing.Point(835, 12);
-            this.MaximizeIcon.Name = "MaximizeIcon";
-            this.MaximizeIcon.Size = new System.Drawing.Size(17, 19);
-            this.MaximizeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MaximizeIcon.TabIndex = 10;
-            this.MaximizeIcon.TabStop = false;
+            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txt_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
+            this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(189, 127);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(356, 27);
+            this.txt_search.TabIndex = 13;
             // 
-            // MinimizeIcon
+            // label1
             // 
-            this.MinimizeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MinimizeIcon.BackColor = System.Drawing.Color.Transparent;
-            this.MinimizeIcon.Image = ((System.Drawing.Image)(resources.GetObject("MinimizeIcon.Image")));
-            this.MinimizeIcon.Location = new System.Drawing.Point(812, 12);
-            this.MinimizeIcon.Name = "MinimizeIcon";
-            this.MinimizeIcon.Size = new System.Drawing.Size(17, 19);
-            this.MinimizeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MinimizeIcon.TabIndex = 8;
-            this.MinimizeIcon.TabStop = false;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Location = new System.Drawing.Point(196, 470);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Status";
             // 
-            // CloseIcon
+            // btn_search
             // 
-            this.CloseIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CloseIcon.BackColor = System.Drawing.Color.Transparent;
-            this.CloseIcon.Image = ((System.Drawing.Image)(resources.GetObject("CloseIcon.Image")));
-            this.CloseIcon.Location = new System.Drawing.Point(858, 12);
-            this.CloseIcon.Name = "CloseIcon";
-            this.CloseIcon.Size = new System.Drawing.Size(17, 19);
-            this.CloseIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CloseIcon.TabIndex = 9;
-            this.CloseIcon.TabStop = false;
-            // 
-            // RestoreDonwIcon
-            // 
-            this.RestoreDonwIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RestoreDonwIcon.BackColor = System.Drawing.Color.Transparent;
-            this.RestoreDonwIcon.Image = ((System.Drawing.Image)(resources.GetObject("RestoreDonwIcon.Image")));
-            this.RestoreDonwIcon.Location = new System.Drawing.Point(835, 12);
-            this.RestoreDonwIcon.Name = "RestoreDonwIcon";
-            this.RestoreDonwIcon.Size = new System.Drawing.Size(17, 19);
-            this.RestoreDonwIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.RestoreDonwIcon.TabIndex = 11;
-            this.RestoreDonwIcon.TabStop = false;
-            this.RestoreDonwIcon.Visible = false;
+            this.btn_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(129)))), ((int)(((byte)(133)))));
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_search.ForeColor = System.Drawing.Color.Black;
+            this.btn_search.Location = new System.Drawing.Point(574, 119);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(127, 46);
+            this.btn_search.TabIndex = 15;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // SearchPatient
             // 
@@ -135,30 +101,23 @@ namespace PDMS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(890, 628);
-            this.Controls.Add(this.MaximizeIcon);
-            this.Controls.Add(this.MinimizeIcon);
-            this.Controls.Add(this.CloseIcon);
-            this.Controls.Add(this.RestoreDonwIcon);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_search);
+            this.Controls.Add(this.listBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SearchPatient";
             this.Text = "SearchPatient";
-            ((System.ComponentModel.ISupportInitialize)(this.MaximizeIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MinimizeIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RestoreDonwIcon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox MaximizeIcon;
-        private System.Windows.Forms.PictureBox MinimizeIcon;
-        private System.Windows.Forms.PictureBox CloseIcon;
-        private System.Windows.Forms.PictureBox RestoreDonwIcon;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
