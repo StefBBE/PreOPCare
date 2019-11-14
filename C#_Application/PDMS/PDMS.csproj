@@ -140,7 +140,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ECG.cs" />
+    <Compile Include="ECGFunc.cs" />
     <Compile Include="SQLCon2.cs" />
     <Compile Include="SQLConnector.cs" />
     <Compile Include="Patient.cs" />

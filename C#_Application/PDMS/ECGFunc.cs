@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 namespace PDMS
 {
-    public class ECG
+    public class ECGFunc
     {
 
 
@@ -42,11 +42,11 @@ namespace PDMS
 
 
 
-        public ECG() // empty constructor
+        public ECGFunc() // empty constructor
         {
 
         }
-        public ECG(string ecgfile, string[] channels, int sampfrom, int sampto) //constructor 
+        public ECGFunc(string ecgfile, string[] channels, int sampfrom, int sampto) //constructor 
         {
 
             this.ecgfile = ecgfile;
@@ -60,7 +60,7 @@ namespace PDMS
 
 
 
-        public static void Display(ECG ecg)
+        public static void Display(ECGFunc ecg)
         {
 
             try
