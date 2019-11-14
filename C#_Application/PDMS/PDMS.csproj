@@ -37,6 +37,7 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -68,7 +69,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="PatinfoLoader.cs" />
+
     <Compile Include="PDMS_Exception.cs" />
+
     <Compile Include="User.cs" />
     <Compile Include="CreatePatient.cs">
       <SubType>Form</SubType>

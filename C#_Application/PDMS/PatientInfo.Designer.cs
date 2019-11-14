@@ -99,7 +99,7 @@ namespace PDMS
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Location = new System.Drawing.Point(189, 372);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 23);
+            this.textBox3.Size = new System.Drawing.Size(251, 20);
             this.textBox3.TabIndex = 38;
             // 
             // textBox2
@@ -108,7 +108,7 @@ namespace PDMS
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(189, 412);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 23);
+            this.textBox2.Size = new System.Drawing.Size(251, 20);
             this.textBox2.TabIndex = 37;
             // 
             // textBox11
@@ -117,7 +117,7 @@ namespace PDMS
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox11.Location = new System.Drawing.Point(189, 183);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(251, 23);
+            this.textBox11.Size = new System.Drawing.Size(251, 20);
             this.textBox11.TabIndex = 36;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
@@ -127,7 +127,7 @@ namespace PDMS
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox10.Location = new System.Drawing.Point(189, 239);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(251, 23);
+            this.textBox10.Size = new System.Drawing.Size(251, 20);
             this.textBox10.TabIndex = 35;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
@@ -137,7 +137,7 @@ namespace PDMS
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Location = new System.Drawing.Point(189, 329);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(251, 23);
+            this.textBox9.Size = new System.Drawing.Size(251, 20);
             this.textBox9.TabIndex = 34;
             // 
             // textBox6
@@ -146,7 +146,7 @@ namespace PDMS
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Location = new System.Drawing.Point(189, 287);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(251, 23);
+            this.textBox6.Size = new System.Drawing.Size(251, 20);
             this.textBox6.TabIndex = 33;
             // 
             // textBox7
@@ -155,18 +155,20 @@ namespace PDMS
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Location = new System.Drawing.Point(189, 135);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(251, 23);
+            this.textBox7.Size = new System.Drawing.Size(251, 20);
             this.textBox7.TabIndex = 31;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(189, 93);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 23);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(251, 20);
             this.textBox1.TabIndex = 25;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label8
             // 
@@ -174,7 +176,7 @@ namespace PDMS
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(87, 412);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 18);
+            this.label8.Size = new System.Drawing.Size(45, 15);
             this.label8.TabIndex = 24;
             this.label8.Text = "Weight";
             // 
@@ -184,7 +186,7 @@ namespace PDMS
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(87, 372);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 18);
+            this.label7.Size = new System.Drawing.Size(43, 15);
             this.label7.TabIndex = 23;
             this.label7.Text = "Height";
             // 
@@ -194,7 +196,7 @@ namespace PDMS
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(80, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 18);
+            this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 22;
             this.label6.Text = "Surname";
             // 
@@ -204,7 +206,7 @@ namespace PDMS
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(87, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 36);
+            this.label5.Size = new System.Drawing.Size(49, 30);
             this.label5.TabIndex = 21;
             this.label5.Text = "Date of \r\nBirth";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,7 +217,7 @@ namespace PDMS
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(64, 231);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 36);
+            this.label4.Size = new System.Drawing.Size(90, 30);
             this.label4.TabIndex = 20;
             this.label4.Text = "Social Security \r\nNumber";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -226,7 +228,7 @@ namespace PDMS
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(80, 329);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.Size = new System.Drawing.Size(68, 15);
             this.label3.TabIndex = 19;
             this.label3.Text = "Medication";
             // 
@@ -236,7 +238,7 @@ namespace PDMS
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(87, 288);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 18);
+            this.label2.Size = new System.Drawing.Size(48, 15);
             this.label2.TabIndex = 18;
             this.label2.Text = "Gender";
             // 
@@ -246,7 +248,7 @@ namespace PDMS
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(87, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 17;
             this.label1.Text = "Name";
             // 
@@ -265,7 +267,7 @@ namespace PDMS
             // 
             // PatientInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(890, 628);
