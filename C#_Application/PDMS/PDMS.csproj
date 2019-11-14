@@ -153,6 +153,8 @@
     <None Include="Login.resx" />
     <Compile Include="Login.cs" />
     <Compile Include="Login.Designer.cs" />
+    <None Include="ECG.resx" />
+    <Compile Include="ECG.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
