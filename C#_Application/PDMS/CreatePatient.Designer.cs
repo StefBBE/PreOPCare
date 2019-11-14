@@ -33,10 +33,10 @@ namespace PDMS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePatient));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox_dateofbirth = new System.Windows.Forms.TextBox();
+            this.textBox_gender = new System.Windows.Forms.TextBox();
+            this.textBox_surname = new System.Windows.Forms.TextBox();
+            this.textBox_name = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,10 +52,10 @@ namespace PDMS
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox12);
+            this.panel1.Controls.Add(this.textBox_dateofbirth);
+            this.panel1.Controls.Add(this.textBox_gender);
+            this.panel1.Controls.Add(this.textBox_surname);
+            this.panel1.Controls.Add(this.textBox_name);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
@@ -70,40 +70,42 @@ namespace PDMS
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(150, 171);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(251, 23);
-            this.textBox11.TabIndex = 52;
+            this.textBox_dateofbirth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
+            this.textBox_dateofbirth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_dateofbirth.Location = new System.Drawing.Point(150, 171);
+            this.textBox_dateofbirth.Name = "textBox11";
+            this.textBox_dateofbirth.Size = new System.Drawing.Size(251, 32);
+            this.textBox_dateofbirth.TabIndex = 52;
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(150, 215);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(251, 23);
-            this.textBox7.TabIndex = 49;
+            this.textBox_gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
+            this.textBox_gender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_gender.Location = new System.Drawing.Point(150, 215);
+            this.textBox_gender.Name = "textBox7";
+            this.textBox_gender.Size = new System.Drawing.Size(251, 32);
+            this.textBox_gender.TabIndex = 49;
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(150, 122);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(251, 23);
-            this.textBox8.TabIndex = 48;
+            this.textBox_surname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
+            this.textBox_surname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_surname.Location = new System.Drawing.Point(150, 122);
+            this.textBox_surname.Name = "textBox8";
+            this.textBox_surname.Size = new System.Drawing.Size(251, 32);
+            this.textBox_surname.TabIndex = 48;
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox12.Location = new System.Drawing.Point(150, 80);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(251, 23);
-            this.textBox12.TabIndex = 47;
+
+            this.textBox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
+            this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox_name.Location = new System.Drawing.Point(150, 80);
+            this.textBox_name.Name = "textBox12";
+            this.textBox_name.Size = new System.Drawing.Size(251, 32);
+            this.textBox_name.TabIndex = 47;
+
             // 
             // label6
             // 
@@ -111,7 +113,7 @@ namespace PDMS
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(41, 122);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 18);
+            this.label6.Size = new System.Drawing.Size(110, 29);
             this.label6.TabIndex = 44;
             this.label6.Text = "Surname";
             // 
@@ -121,7 +123,7 @@ namespace PDMS
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(48, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 36);
+            this.label5.Size = new System.Drawing.Size(95, 58);
             this.label5.TabIndex = 43;
             this.label5.Text = "Date of \r\nBirth";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,7 +134,7 @@ namespace PDMS
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(51, 220);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 18);
+            this.label2.Size = new System.Drawing.Size(94, 29);
             this.label2.TabIndex = 40;
             this.label2.Text = "Gender";
             // 
@@ -142,7 +144,7 @@ namespace PDMS
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(48, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.Size = new System.Drawing.Size(78, 29);
             this.label1.TabIndex = 39;
             this.label1.Text = "Name";
             // 
@@ -164,7 +166,7 @@ namespace PDMS
             this.button2.TabIndex = 27;
             this.button2.Text = "SAVE";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Save_Button_OnClick);
             // 
             // button1
             // 
@@ -180,7 +182,7 @@ namespace PDMS
             // 
             // CreatePatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(890, 628);
@@ -200,10 +202,10 @@ namespace PDMS
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox_dateofbirth;
+        private System.Windows.Forms.TextBox textBox_gender;
+        private System.Windows.Forms.TextBox textBox_surname;
+        private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;

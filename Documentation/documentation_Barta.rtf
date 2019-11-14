@@ -1,10 +1,10 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
-{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red113\green157\blue207;\red78\green201\blue176;
-}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c51347\c68206\c84790;\cssrgb\c35738\c81913\c74421;
-}
-\paperw11905\paperh16837\margl1133\margr1133\margb1133\margt1133\vieww10800\viewh8400\viewkind0
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red238\green238\blue236;\red113\green157\blue207;
+\red78\green201\blue176;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgenericrgb\c93333\c93333\c92549;\cssrgb\c51347\c68206\c84790;
+\cssrgb\c35738\c81913\c74421;}
+\paperw11900\paperh16840\margl1133\margr1133\margb1133\margt1133\vieww10800\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\b\fs32 \cf2 \expnd0\expndtw0\kerning0
@@ -18,7 +18,13 @@ C# Documentation PDMS by Michael Barta\
 \b\fs28 \cf2 Class: ECG\
 \pard\pardeftab720\partightenfactor0
 
-\b0\fs22 \cf2 \
+\f1\b0\fs26 \cf0 \kerning1\expnd0\expndtw0 string ecgfile: string containing the filepath to the ECG file\
+int sampfrom,sampto: two integer containing information about starting point (sampfrom) and end point (sampto) of ecg.\
+string[] channels: string array containing the channel numbers to display (e.g: [1,3],[1],[1,3,6])\cf3 \uc0\u8232 
+\f0\fs22 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 \pard\pardeftab720\partightenfactor0
 
 \b\fs28 \cf2 Methods:\
@@ -43,13 +49,16 @@ C# Documentation PDMS by Michael Barta\
 \
 \pard\pardeftab720\partightenfactor0
 
-\b\fs28 \cf2 Class: SQLConnector\
+\b\fs28 \cf2 Partial Class: SQLConnector\
+static string 
+\b0 connection string: specifies connection to database, contains ip adress, password, username, 
+\b \
 \
 Methods:\
 \
 \pard\pardeftab720\partightenfactor0
 
-\i\b0 \cf2 int LogIn(\cf3 string\cf4  \cf2 username,\cf4  \cf3 string\cf4  \cf2 password)\
+\i\b0 \cf2 int LogIn(\cf4 string\cf5  \cf2 username,\cf5  \cf4 string\cf5  \cf2 password)\
 \pard\pardeftab720\partightenfactor0
 
 \i0\b\fs22 \cf2 username:
@@ -57,4 +66,36 @@ Methods:\
 
 \b password:
 \b0  a string containing the password with which the user is in the SQL database\uc0\u8232 returns an integer with the role of the user \
-}
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\i\fs28 \cf2 void Savepatient(Patient patient)\
+
+\b patient: 
+\b0 an object of type Patient \
+\
+\pard\pardeftab720\partightenfactor0
+
+\i0\fs22 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\b\fs28 \cf2 Class: Patient
+\b0\fs22 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\b \cf2 Role Lookup Table 
+\b0 \
+0 : No Role/Acces denied\
+1: Admin\
+2: physician\
+3: Nurse\
+4: Patient \
+\
+
+\b Sex Lookup Table\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf2 1: Male\
+0: Female}
