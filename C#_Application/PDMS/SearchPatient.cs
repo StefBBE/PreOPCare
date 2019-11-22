@@ -12,36 +12,69 @@ namespace PDMS
 {
     public partial class SearchPatient : Form
     {
-        public SearchPatient()
+        List<Patient> patlist = new List<Patient>();
+        Current cur = new Current();
+        public SearchPatient(Current cur)
         {
             InitializeComponent();
+            this.cur = cur;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            listBox1.SelectedItems.Clear();
-            for (int i=listBox1.Items.Count - 1;i >= 0;i--)
-            {
-                if (listBox1.Items[i].ToString().ToLower().Contains(txt_search.Text.ToLower()))
-                {
-                    listBox1.SetSelected(i,true); 
-                }
-            }
-            label1.Text = listBox1.SelectedItems.Count.ToString() + " items found";
 
-        }
 
         private void btn_search_Click(object sender, EventArgs e)
         {
             listBox1.SelectedItems.Clear();
-            for (int i = listBox1.Items.Count - 1; i >= 0; i--)
+            SQLConnector sq = new SQLConnector();
+            String str = txt_search.Text;
+            String[] spearator = { " " };
+            int count = 2;
+            String[] strlist = str.Split(spearator, count,
+                   StringSplitOptions.RemoveEmptyEntries);
+            if (strlist.Length == 2)
             {
-                if (listBox1.Items[i].ToString().ToLower().Contains(txt_search.Text.ToLower())) 
+                patlist = sq.searchpatient(strlist[0], strlist[1]);
+                List<string> Liste = new List<string>();
+                foreach (Patient pat in patlist)
                 {
-                    listBox1.SetSelected(i, true);
+                    Liste.Add(String.Format("{0} {1}, {2}", pat.Name, pat.Surname, pat.Date_of_birth));
+                }
+                object[] array = Liste.ToArray<object>();
+                this.listBox1.Items.AddRange(array);
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter Prename and Surname, seperated by a whitespace");
+            }
+        }
+
+        private void loadpatbut_Click(object sender, EventArgs e)
+        {
+
+            if (listBox1.SelectedItem!=null)
+            {
+                String str = listBox1.SelectedItem.ToString();
+                String[] spearator = { " ",", " };
+                int count = 3;
+                String[] strlist = str.Split(spearator, count,
+                       StringSplitOptions.RemoveEmptyEntries);
+                foreach (Patient pat in patlist)
+                {
+
+                    /*string message = strlist[1];
+                    string caption = strlist[0];
+                    var result = MessageBox.Show(message, caption,
+                                                 MessageBoxButtons.YesNo,
+                                                 MessageBoxIcon.Question);*/
+                    if (pat.Name==strlist[0] && pat.Surname ==strlist[1] && pat.Date_of_birth == strlist[2])
+                    {
+                        Current.curpat = pat;
+                        MessageBox.Show("Patient loaded");
+                    }
                 }
             }
-            label1.Text = listBox1.SelectedItems.Count.ToString() + " items found";
+            
         }
+        
     }
 }

@@ -13,12 +13,11 @@ namespace PDMS
 {
     class PatinfoLoader
     {
-        Current cur;
+        // Current cur;
         bool brk=false;
 
         public PatinfoLoader(Current cur)
         {
-            this.cur = cur;
 
 
             while (cur.curpatidg() == 0 & !brk)
