@@ -53,6 +53,7 @@ namespace PDMS
             this.VerticalMenu.Name = "VerticalMenu";
             this.VerticalMenu.Size = new System.Drawing.Size(250, 628);
             this.VerticalMenu.TabIndex = 0;
+            this.VerticalMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerticalMenu_MouseDown);
             // 
             // button4
             // 
