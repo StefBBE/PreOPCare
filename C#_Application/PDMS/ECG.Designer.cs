@@ -61,7 +61,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(890, 98);
             this.panel2.TabIndex = 2;
-            
             // 
             // textBox2
             // 
@@ -107,7 +106,6 @@
             this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Start Time";
-            
             // 
             // label1
             // 
@@ -118,7 +116,6 @@
             this.label1.Size = new System.Drawing.Size(116, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Patient\'s ECGs";
-            
             // 
             // comboBox1
             // 
@@ -151,6 +148,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.button1.Location = new System.Drawing.Point(740, 32);
             this.button1.Name = "button1";

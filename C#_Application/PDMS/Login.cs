@@ -26,5 +26,10 @@ namespace PDMS
         {
 
         }
+
+        private void Welcome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
