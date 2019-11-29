@@ -3,7 +3,7 @@
 import wfdb
 import sys
 import os
-
+print('hello world')
 ecgfile = sys.argv[1]
 channels = [0];
 stringarray = sys.argv[2].split(',')
