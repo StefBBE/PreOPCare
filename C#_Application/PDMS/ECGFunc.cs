@@ -51,8 +51,8 @@ namespace PDMS
 
             this.ecgfile = ecgfile;
             this.channels = channels;
-            this.sampfrom = Sampfrom;
-            this.sampto = Sampto;
+            this.Sampfrom = sampfrom;
+            this.Sampto = sampto;
 
         }
 
@@ -65,13 +65,25 @@ namespace PDMS
 
             try
             {
-                string fileName = "M:/PDMS/PDMS/Python/wfdbscript.py";
+                /*
+                string fileName = "M:\\PDMS\\PDMS\\Python\\wfdbscript.py";
                 string arguments = string.Format("{0} {1} {2} {3}", ecg.ecgfile, ecg.channels, ecg.sampfrom, ecg.sampto); // arguments to pass to the pythonscript
+                */
+
+
+                string fileName = "M:\\Python3\\python.exe";
+                string arguments = string.Format("M:\\PDMS\\PDMS\\Python\\wfdbscript.py {0} {1} {2} {3}", ecg.ecgfile,ecg.channels,ecg.Sampfrom,ecg.Sampto);
                 Process proc = new Process();
-                proc.StartInfo = new ProcessStartInfo(fileName, arguments); //starting the pythonscript and handing over arguments 
-                proc.StartInfo.CreateNoWindow = true;
-                proc.StartInfo.UseShellExecute = false;
+                
+                proc.StartInfo = new ProcessStartInfo(fileName, arguments);
+               // proc.StartInfo.WorkingDirectory = @"M:\Python3";
+              // proc.StartInfo.RedirectStandardOutput = false;
+                //starting the pythonscript and handing over arguments 
+               // proc.StartInfo.CreateNoWindow = false;
+               // proc.StartInfo.UseShellExecute = true;
                 proc.Start();
+                
+                
             }
             catch (ArgumentOutOfRangeException e)
             {

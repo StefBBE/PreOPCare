@@ -58,7 +58,7 @@
             this.panel2.Controls.Add(this.textBox_start);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(1, 220);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(668, 80);
             this.panel2.TabIndex = 2;
@@ -66,7 +66,7 @@
             // textBox_channels
             // 
             this.textBox_channels.Location = new System.Drawing.Point(274, 47);
-            this.textBox_channels.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_channels.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_channels.Name = "textBox_channels";
             this.textBox_channels.Size = new System.Drawing.Size(92, 20);
             this.textBox_channels.TabIndex = 23;
@@ -85,7 +85,7 @@
             // textBox_end
             // 
             this.textBox_end.Location = new System.Drawing.Point(464, 45);
-            this.textBox_end.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_end.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_end.Multiline = true;
             this.textBox_end.Name = "textBox_end";
             this.textBox_end.Size = new System.Drawing.Size(83, 21);
@@ -132,23 +132,17 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
             this.comboBox1.ItemHeight = 17;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Mariana Afonso",
-            "Mariana Rocha",
-            "Mariana Ferreira",
-            "Mariana Rodrigues",
-            "Laura Rodrigues",
-            "Laura Pires"});
             this.comboBox1.Location = new System.Drawing.Point(118, 17);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(248, 25);
             this.comboBox1.TabIndex = 9;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // textBox_start
             // 
             this.textBox_start.Location = new System.Drawing.Point(464, 15);
-            this.textBox_start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_start.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_start.Multiline = true;
             this.textBox_start.Name = "textBox_start";
             this.textBox_start.Size = new System.Drawing.Size(83, 21);
@@ -160,7 +154,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.button1.Location = new System.Drawing.Point(555, 26);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 5;
@@ -176,7 +170,7 @@
             this.ClientSize = new System.Drawing.Size(668, 510);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ECG";
             this.Text = "ECG";
             this.Load += new System.EventHandler(this.ECG_Load);

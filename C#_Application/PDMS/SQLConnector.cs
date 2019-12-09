@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using MySql.Data.MySqlClient;
 namespace PDMS
@@ -83,6 +84,61 @@ namespace PDMS
                 Console.WriteLine(e.ToString());
 
             }
+        }
+
+        public static List<string> GetECG_Name(Patient pat)
+        {
+            
+            List<string> names = new List<string>();
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            string query = String.Format("SELECT Name FROM PDMS.ECG WHERE (PatientID = {0})",pat.PatientID);
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlDataReader myReader;
+            myReader = cmd.ExecuteReader();
+            try
+            {
+                while (myReader.Read())
+                {
+                    names.Add(myReader.GetString("Name"));
+                        
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return names;
+        }
+
+        public static string GetFilepath(String Name)
+        {
+            try
+            {
+                string filepath;
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = String.Format("SELECT Filepath FROM PDMS.ECG WHERE (Name = '{0}')", Name);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader myReader;
+                myReader = cmd.ExecuteReader();
+                myReader.Read();
+                filepath = Convert.ToString(myReader[0]);
+                
+                connection.Close();
+                return filepath;
+
+            }
+            catch
+            {
+                return null;
+            }           
+            
+
+
+            
         }
 
 

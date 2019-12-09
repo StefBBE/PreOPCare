@@ -147,7 +147,7 @@
     <Compile Include="SQLCon2.cs" />
     <Compile Include="SQLConnector.cs" />
     <Compile Include="Patient.cs" />
-    <None Include="Login.resx" />
+    <EmbeddedResource Include="Login.resx" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
