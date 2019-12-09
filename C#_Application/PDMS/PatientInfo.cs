@@ -104,11 +104,8 @@ namespace PDMS
 
         private void ECG_Display_OnClick(object sender, EventArgs e)
         {
-            /* implement when UI finished
-            ECG ecg = new ECG(file,channels,sampfrom,sampto);
-            ECG.Display(ecg);
-         
-            */
+            
+            // ECG fenster öffnen?
 
         }
 
