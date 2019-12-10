@@ -34,9 +34,7 @@ namespace PDMS
                 string MySvNr = status["baseContact"]["cardData"]["nummer"].ToString();
                 bool sex = false;
                 if (MyGeschlecht == "M") { sex = true; }
-                HexConverter hc = new HexConverter();
-                String HMyCin = hc.converter(MyCin);
-                Patient found = new Patient(0, MyVorname, MyNachname, "", MySvNr, MyGeburtsdatum, sex, 0, 0,HMyCin);
+                Patient found = new Patient(0, MyVorname, MyNachname, "", MySvNr, MyGeburtsdatum, sex, 0, 0,MyCin);
 
                 Current.patinfo = true;
 
