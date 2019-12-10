@@ -41,7 +41,7 @@ namespace PDMS
         {
             string connectionString = "server=192.168.43.131;database=PDMS;uid=monty;pwd=pass1";
             MySqlConnection connection = new MySqlConnection(connectionString);
-
+            Current cur = new Current();
             try
             {
                 connection.Open();
@@ -49,13 +49,9 @@ namespace PDMS
                 string query = String.Format("SELECT Role FROM Users WHERE EcardNumber=\'{0}\'", hexcid);
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader rdr = cmd.ExecuteReader();
-                rdr.Read();
-                int role = Convert.ToInt32(rdr[0]);
+                cur.Role = rdr.GetInt32("Role");
                 rdr.Close();
                 connection.Close();
-                Current cur = new Current();
-                cur.Hexcid = hexcid;
-                cur.Role = role;
                 return cur;
 
             }
@@ -63,7 +59,6 @@ namespace PDMS
             {
                 Console.WriteLine("Connection failed");
                 Console.WriteLine(e.ToString());
-                Current cur = new Current();
                 return cur;
             }
         }

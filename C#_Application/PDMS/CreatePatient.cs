@@ -134,5 +134,14 @@ namespace PDMS
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReadCard rc = new ReadCard();
+            Patient pat = rc.readpatient();
+            textBox1.Text = Current.curpat.Name;
+            textBox1.ForeColor = System.Drawing.Color.Black;
+            textBox1.ReadOnly = true;
+        }
     }
     }

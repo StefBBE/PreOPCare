@@ -13,10 +13,13 @@ namespace PDMS
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        Current cur = new Current();
+        public Form1(Current cur)
         {
             InitializeComponent();
+            this.cur = cur;
         }
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -24,9 +27,8 @@ namespace PDMS
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         //test code
-        Current cur = new Current();
+        //Current cur = new Current();
         //end test code
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -62,7 +64,7 @@ namespace PDMS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenFormInPanel(new SearchPatient());
+            OpenFormInPanel(new SearchPatient(cur));
         }
 
         private void button4_Click(object sender, EventArgs e)
