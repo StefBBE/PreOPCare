@@ -95,7 +95,7 @@ namespace PDMS
             // loadpatbut
             // 
             //this.loadpatbut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadpatbut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loadpatbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(129)))), ((int)(((byte)(133)))));
            // this.loadpatbut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.loadpatbut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

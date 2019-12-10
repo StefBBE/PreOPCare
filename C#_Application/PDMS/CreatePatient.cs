@@ -139,9 +139,9 @@ namespace PDMS
         {
             ReadCard rc = new ReadCard();
             Patient pat = rc.readpatient();
-            textBox1.Text = Current.curpat.Name;
-            textBox1.ForeColor = System.Drawing.Color.Black;
-            textBox1.ReadOnly = true;
+            //textBox1.Text = Current.curpat.Name;
+            //textBox1.ForeColor = System.Drawing.Color.Black;
+            //textBox1.ReadOnly = true;
         }
     }
     }
