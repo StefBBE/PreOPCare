@@ -153,7 +153,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <None Include="ECG.resx" />
+    <EmbeddedResource Include="ECG.resx" />
     <Compile Include="ECG.cs">
       <SubType>Form</SubType>
     </Compile>

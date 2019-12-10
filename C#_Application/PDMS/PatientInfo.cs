@@ -17,15 +17,16 @@ namespace PDMS
 
         public PatientInfo(Current cur)
         {
-            
+
             bool brk = false;
-            while ((cur.curpatnameg() == "no Patient"|| cur.curpatnameg() == "") && !brk) 
+            bool docdec = false;
+            while (!Current.patinfo && !brk) 
             {
-                Current.curpat = rc.readpatient();
-                if (cur.curpatnameg() == "no Patient" || cur.curpatnameg() == "")
+
+                if (cur.Role==2&&!docdec)
                 {
-                    const string message ="Card can't be read. Try again (Yes) or Cancel (No)";
-                    const string caption = "Ecard Problem";
+                    const string message = "View Information of Patient via E-Card (Yes) or the Patient loaded via Search (No)";
+                    const string caption = "Patient Choice";
                     var result = MessageBox.Show(message, caption,
                                                  MessageBoxButtons.YesNo,
                                                  MessageBoxIcon.Question);
@@ -34,15 +35,32 @@ namespace PDMS
                     if (result == DialogResult.No)
                     {
                         // cancel the closure of the form.
-                        brk=true;
+                        docdec = true;
                     }
                 }
+
+                if (!docdec)
+                {
+                    Current.curpat = rc.readpatient();
+                } 
+                
+                if (!docdec && !Current.patinfo)
+                    {
+                        const string message = "Card can't be read. Try again (Yes) or Cancel (No)";
+                        const string caption = "Ecard Problem";
+                        var result = MessageBox.Show(message, caption,
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Question);
+
+                        // If the no button was pressed ...
+                        if (result == DialogResult.No)
+                        {
+                            // cancel the closure of the form.
+                            brk = true;
+                        }
+                    }
             }
-            
-          
-            
-            //}
-            //end test code
+            Current.patinfo = false;
 
             InitializeComponent();
             textBox1.Text = Current.curpat.Name;
@@ -101,11 +119,8 @@ namespace PDMS
 
         private void ECG_Display_OnClick(object sender, EventArgs e)
         {
-            /* implement when UI finished
-            ECG ecg = new ECG(file,channels,sampfrom,sampto);
-            ECG.Display(ecg);
-         
-            */
+            
+            // ECG fenster �ffnen?
 
         }
 

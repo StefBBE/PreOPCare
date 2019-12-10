@@ -53,6 +53,7 @@ namespace PDMS
             this.VerticalMenu.Name = "VerticalMenu";
             this.VerticalMenu.Size = new System.Drawing.Size(250, 628);
             this.VerticalMenu.TabIndex = 0;
+            this.VerticalMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerticalMenu_MouseDown);
             // 
             // button4
             // 
@@ -134,6 +135,7 @@ namespace PDMS
             this.ContainerPanel.AutoSize = true;
             this.ContainerPanel.BackColor = System.Drawing.Color.Transparent;
             this.ContainerPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContainerPanel.BackgroundImage")));
+            this.ContainerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContainerPanel.Location = new System.Drawing.Point(250, 0);
             this.ContainerPanel.Name = "ContainerPanel";
@@ -145,13 +147,14 @@ namespace PDMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1140, 628);
             this.Controls.Add(this.ContainerPanel);
             this.Controls.Add(this.VerticalMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "PDMS";
             this.VerticalMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

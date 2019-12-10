@@ -53,6 +53,7 @@ namespace PDMS
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
             this.panel1.Controls.Add(this.label9);
@@ -84,7 +85,7 @@ namespace PDMS
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label9.Location = new System.Drawing.Point(51, 233);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 15);
+            this.label9.Size = new System.Drawing.Size(75, 18);
             this.label9.TabIndex = 64;
             this.label9.Text = "Password";
             // 
@@ -94,7 +95,7 @@ namespace PDMS
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label8.Location = new System.Drawing.Point(32, 282);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 15);
+            this.label8.Size = new System.Drawing.Size(112, 18);
             this.label8.TabIndex = 63;
             this.label8.Text = "E-Card Number";
             // 
@@ -104,7 +105,7 @@ namespace PDMS
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label7.Location = new System.Drawing.Point(32, 326);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 15);
+            this.label7.Size = new System.Drawing.Size(116, 18);
             this.label7.TabIndex = 62;
             this.label7.Text = "ID-Card Number";
             // 
@@ -114,7 +115,7 @@ namespace PDMS
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label4.Location = new System.Drawing.Point(67, 370);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 15);
+            this.label4.Size = new System.Drawing.Size(39, 18);
             this.label4.TabIndex = 61;
             this.label4.Text = "Role";
             // 
@@ -124,7 +125,7 @@ namespace PDMS
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label3.Location = new System.Drawing.Point(183, 233);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.Size = new System.Drawing.Size(0, 18);
             this.label3.TabIndex = 60;
             // 
             // label2
@@ -133,7 +134,7 @@ namespace PDMS
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label2.Location = new System.Drawing.Point(51, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 15);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 59;
             this.label2.Text = "Username";
             // 
@@ -143,7 +144,7 @@ namespace PDMS
             this.textBox_role.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_role.Location = new System.Drawing.Point(158, 370);
             this.textBox_role.Name = "textBox_role";
-            this.textBox_role.Size = new System.Drawing.Size(251, 20);
+            this.textBox_role.Size = new System.Drawing.Size(251, 23);
             this.textBox_role.TabIndex = 56;
             // 
             // textBox_idcardnumber
@@ -152,7 +153,7 @@ namespace PDMS
             this.textBox_idcardnumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_idcardnumber.Location = new System.Drawing.Point(158, 326);
             this.textBox_idcardnumber.Name = "textBox_idcardnumber";
-            this.textBox_idcardnumber.Size = new System.Drawing.Size(251, 20);
+            this.textBox_idcardnumber.Size = new System.Drawing.Size(251, 23);
             this.textBox_idcardnumber.TabIndex = 55;
             // 
             // textBox_password
@@ -161,7 +162,7 @@ namespace PDMS
             this.textBox_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_password.Location = new System.Drawing.Point(158, 233);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(251, 20);
+            this.textBox_password.Size = new System.Drawing.Size(251, 23);
             this.textBox_password.TabIndex = 54;
             // 
             // textBox_ecardnumber
@@ -170,7 +171,7 @@ namespace PDMS
             this.textBox_ecardnumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_ecardnumber.Location = new System.Drawing.Point(158, 282);
             this.textBox_ecardnumber.Name = "textBox_ecardnumber";
-            this.textBox_ecardnumber.Size = new System.Drawing.Size(251, 20);
+            this.textBox_ecardnumber.Size = new System.Drawing.Size(251, 23);
             this.textBox_ecardnumber.TabIndex = 53;
             // 
             // textBox_dateofbirth
@@ -179,7 +180,7 @@ namespace PDMS
             this.textBox_dateofbirth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_dateofbirth.Location = new System.Drawing.Point(158, 143);
             this.textBox_dateofbirth.Name = "textBox_dateofbirth";
-            this.textBox_dateofbirth.Size = new System.Drawing.Size(251, 20);
+            this.textBox_dateofbirth.Size = new System.Drawing.Size(251, 23);
             this.textBox_dateofbirth.TabIndex = 52;
             // 
             // textBox_username
@@ -188,7 +189,7 @@ namespace PDMS
             this.textBox_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_username.Location = new System.Drawing.Point(158, 190);
             this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(251, 20);
+            this.textBox_username.Size = new System.Drawing.Size(251, 23);
             this.textBox_username.TabIndex = 50;
             // 
             // textBox_surname
@@ -197,17 +198,17 @@ namespace PDMS
             this.textBox_surname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_surname.Location = new System.Drawing.Point(158, 95);
             this.textBox_surname.Name = "textBox_surname";
-            this.textBox_surname.Size = new System.Drawing.Size(251, 20);
+            this.textBox_surname.Size = new System.Drawing.Size(251, 23);
             this.textBox_surname.TabIndex = 48;
             // 
             // textBox_name
             // 
             this.textBox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
             this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox_name.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox_name.Location = new System.Drawing.Point(158, 54);
             this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(251, 20);
+            this.textBox_name.Size = new System.Drawing.Size(251, 23);
             this.textBox_name.TabIndex = 47;
             // 
             // label6
@@ -216,7 +217,7 @@ namespace PDMS
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(51, 95);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.Size = new System.Drawing.Size(68, 18);
             this.label6.TabIndex = 44;
             this.label6.Text = "Surname";
             // 
@@ -226,7 +227,7 @@ namespace PDMS
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(58, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 30);
+            this.label5.Size = new System.Drawing.Size(60, 36);
             this.label5.TabIndex = 43;
             this.label5.Text = "Date of \r\nBirth";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,7 +238,7 @@ namespace PDMS
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(58, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.Size = new System.Drawing.Size(48, 18);
             this.label1.TabIndex = 39;
             this.label1.Text = "Name";
             // 
@@ -256,9 +257,10 @@ namespace PDMS
             // 
             // CreateUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(890, 628);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

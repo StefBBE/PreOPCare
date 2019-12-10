@@ -27,6 +27,7 @@ namespace PDMS
 
         }
 
+
         private void ECard_button_Click(object sender, EventArgs e)
         {
             ReadCard rc = new ReadCard();
@@ -76,6 +77,11 @@ namespace PDMS
             this.Hide();
             //Application.Run();
             
+        }
+
+        private void Welcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

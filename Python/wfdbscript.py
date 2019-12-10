@@ -1,28 +1,40 @@
-#!/usr/bin/env python3
+
 
 import wfdb
 import sys
 import os
 
-ecgfile = sys.argv[1]
-channels = [0];
-stringarray = sys.argv[2].split(',')
-for i in range(len(stringarray)-1):
-    channels[i] = int(stringarray[i])
+try:
+    
+   
+    ecgfile = sys.argv[1]
+    stringarray = sys.argv[2].split(',')
+    channels = []
+    for i in range(len(stringarray)):
+        channels.append(int(stringarray[i]))
+		
+    sampfrom_seconds = int(sys.argv[3])
+    sampto_seconds = int(sys.argv[4])
 
-sampfrom_seconds = int(sys.argv[3])
-sampto_seconds = int(sys.argv[4])
+    directory = 'M:\\PDMS\\PDMS\\Python'
+    os.chdir(directory)
 
+    signals,fields = wfdb.rdsamp(ecgfile, channels = channels)
+    sampling_frequency = fields ['fs']
 
-directory = '/Users/michaelbarta/wfdb_test/'+ ecgfile
-os.chdir(directory)
+    sampfrom_samples = sampfrom_seconds * sampling_frequency
+    sampto_samples = sampto_seconds * sampling_frequency
 
-signals,fields = wfdb.rdsamp(ecgfile, channels = channels)
-sampling_frequency = fields ['fs']
+    record = wfdb.rdrecord(ecgfile, sampfrom = sampfrom_samples, sampto = sampto_samples,channels=channels)
 
-sampfrom_samples = sampfrom_seconds * sampling_frequency
-sampto_samples = sampto_seconds * sampling_frequency
+    wfdb.plot_wfdb(record = record, annotation = None, figsize=(15,7))
+	
+except:
+   
+    for i in sys.exc_info():
+	    print(i)
+    input()
+	
 
-record = wfdb.rdrecord(ecgfile, sampfrom = sampfrom_samples, sampto = sampto_samples,channels=channels)
+	
 
-wfdb.plot_wfdb(record = record, annotation = None, figsize=(15,7))

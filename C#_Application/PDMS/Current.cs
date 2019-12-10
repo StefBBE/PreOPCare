@@ -11,11 +11,14 @@ namespace PDMS
         private static int role;
         public static Patient curpat = new Patient();
         private static string hexcid;
+        public static bool patinfo = false;
         
         public Current()
         {
-            /*curpat.PatientID = 0;
+
+            
             curpat.Name = "no Patient";
+            /*curpat.PatientID = 0;
             curpat.Surname = "loaded";
             curpat.Date_of_birth = "empty pat obj was created right now";
             curpat.Socialsecurity = "no social security";

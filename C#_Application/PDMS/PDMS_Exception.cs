@@ -95,6 +95,19 @@ namespace PDMS
             }
 
         }
+        public class InvalidIdSocialSecurity : PDMS_Exception
+        {
+            public InvalidIdSocialSecurity()
+            {
+
+            }
+            public static void ErrorMessage()
+            {
+                MessageBox.Show("Invalid Social Security Number Format. Number has 10 digits!", "Social security Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         public class InvalidRoleException : PDMS_Exception
         {
             public InvalidRoleException()

@@ -70,6 +70,9 @@ namespace PDMS
                     {
                         Current.curpat = pat;
                         MessageBox.Show("Patient loaded");
+
+                        Current.patinfo = true;
+
                     }
                 }
             }

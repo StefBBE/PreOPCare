@@ -10,7 +10,7 @@ namespace PDMS
 
       string ecgfile; // variable holding path to ecgfile
         int sampfrom, sampto; //variables giving details on what channels to display, and  from where to where to display
-        string[] channels;
+        string channels;
 
         public int Sampfrom
 
@@ -46,13 +46,13 @@ namespace PDMS
         {
 
         }
-        public ECGFunc(string ecgfile, string[] channels, int sampfrom, int sampto) //constructor 
+        public ECGFunc(string ecgfile, string channels, int sampfrom, int sampto) //constructor 
         {
 
             this.ecgfile = ecgfile;
             this.channels = channels;
-            this.sampfrom = Sampfrom;
-            this.sampto = Sampto;
+            this.Sampfrom = sampfrom;
+            this.Sampto = sampto;
 
         }
 
@@ -65,12 +65,25 @@ namespace PDMS
 
             try
             {
-                string fileName = "/Library/Frameworks/Python.framework/Versions/3.7/bin/wfdbscript.py";
-                string arguments = string.Format("{0} {1} {2} {3}", ecg.ecgfile, String.Join(",", ecg.channels), ecg.sampfrom, ecg.sampto); // arguments to pass to the pythonscript
+                /*
+                string fileName = "M:\\PDMS\\PDMS\\Python\\wfdbscript.py";
+                string arguments = string.Format("{0} {1} {2} {3}", ecg.ecgfile, ecg.channels, ecg.sampfrom, ecg.sampto); // arguments to pass to the pythonscript
+                */
+
+
+                string fileName = "M:\\Python3\\python.exe";
+                string arguments = string.Format("M:\\PDMS\\PDMS\\Python\\wfdbscript.py {0} {1} {2} {3}", ecg.ecgfile,ecg.channels,ecg.Sampfrom,ecg.Sampto);
                 Process proc = new Process();
-                proc.StartInfo = new ProcessStartInfo(fileName, arguments); //starting the pythonscript and handing over arguments 
-                proc.StartInfo.CreateNoWindow = true;
+                
+                proc.StartInfo = new ProcessStartInfo(fileName, arguments);
+               // proc.StartInfo.WorkingDirectory = @"M:\Python3";
+              // proc.StartInfo.RedirectStandardOutput = false;
+                //starting the pythonscript and handing over arguments 
+               // proc.StartInfo.CreateNoWindow = false;
+               // proc.StartInfo.UseShellExecute = true;
                 proc.Start();
+                
+                
             }
             catch (ArgumentOutOfRangeException e)
             {

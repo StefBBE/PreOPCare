@@ -66,20 +66,24 @@
             // 
             this.PasswordEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
             this.PasswordEnter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PasswordEnter.Location = new System.Drawing.Point(33, 160);
-            this.PasswordEnter.Margin = new System.Windows.Forms.Padding(2);
+
+            this.PasswordEnter.Location = new System.Drawing.Point(44, 197);
             this.PasswordEnter.Name = "PasswordEnter";
-            this.PasswordEnter.Size = new System.Drawing.Size(174, 26);
+            this.PasswordEnter.Size = new System.Drawing.Size(223, 26);
+
             this.PasswordEnter.TabIndex = 10;
             // 
             // Username
             // 
-            this.Username.BackColor = System.Drawing.Color.DarkGray;
+
+
+            this.Username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
             this.Username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Username.Location = new System.Drawing.Point(33, 93);
-            this.Username.Margin = new System.Windows.Forms.Padding(2);
+            this.Username.Location = new System.Drawing.Point(13, 98);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(174, 26);
+            this.Username.Size = new System.Drawing.Size(232, 26);
+
+
             this.Username.TabIndex = 9;
             // 
             // Login_button
@@ -160,6 +164,11 @@
             this.Welcome.Size = new System.Drawing.Size(91, 24);
             this.Welcome.TabIndex = 0;
             this.Welcome.Text = "Welcome";
+
+
+            this.Welcome.Click += new System.EventHandler(this.Welcome_Click);
+
+
             // 
             // Login
             // 
