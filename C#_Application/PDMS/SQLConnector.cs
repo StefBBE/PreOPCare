@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using MySql.Data.MySqlClient;
 namespace PDMS
 {
     public partial class SQLConnector
     {
-        static string connectionString = "server=127.0.0.1;database=PDMS;uid=root1;pwd=root1;";
+        static string connectionString = "server=127.0.0.1;database=PDMS;uid=monty;pwd=pass1;";
 
         public static int LogIn(string username, string password)
         {
@@ -43,7 +44,7 @@ namespace PDMS
                 Console.WriteLine("Connection Open!");
 
                
-               string query = String.Format("INSERT INTO PDMS.Patients (Name,Surname,DateOfBirth,SocialSecurity,Sex,Medication,Height,Weight,EcardNumber) VALUES (\'{0}\',\'{1}\',\'{2}\',\'{3}\',{4},\'{5}\',\'{6}\',\'{7}\',\'{8}\')", patient.Name, patient.Surname, patient.Date_of_birth, patient.Socialsecurity, patient.Sex, patient.Medication, patient.Height, patient.Weight,patient.Ecardnumber);
+                string query = String.Format("INSERT INTO PDMS.Patients (Name,Surname,DateOfBirth,SocialSecurity,Sex,Medication,Height,Weight,EcardNumber) VALUES (\'{0}\',\'{1}\',\'{2}\',\'{3}\',{4},\'{5}\',\'{6}\',\'{7}\',\'{8}\')", patient.Name, patient.Surname, patient.Date_of_birth, patient.Socialsecurity, patient.Sex, patient.Medication, patient.Height, patient.Weight,patient.Ecardnumber);
               
                 
 
@@ -83,6 +84,61 @@ namespace PDMS
                 Console.WriteLine(e.ToString());
 
             }
+        }
+
+        public static List<string> GetECG_Name(Patient pat)
+        {
+            
+            List<string> names = new List<string>();
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            string query = String.Format("SELECT Name FROM PDMS.ECG WHERE (PatientID = {0})",pat.PatientID);
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlDataReader myReader;
+            myReader = cmd.ExecuteReader();
+            try
+            {
+                while (myReader.Read())
+                {
+                    names.Add(myReader.GetString("Name"));
+                        
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return names;
+        }
+
+        public static string GetFilepath(String Name)
+        {
+            try
+            {
+                string filepath;
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = String.Format("SELECT Filepath FROM PDMS.ECG WHERE (Name = '{0}')", Name);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader myReader;
+                myReader = cmd.ExecuteReader();
+                myReader.Read();
+                filepath = Convert.ToString(myReader[0]);
+                
+                connection.Close();
+                return filepath;
+
+            }
+            catch
+            {
+                return null;
+            }           
+            
+
+
+            
         }
 
 

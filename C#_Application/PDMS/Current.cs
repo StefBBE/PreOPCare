@@ -9,13 +9,15 @@ namespace PDMS
     public class Current
     {
         private static int role;
-        public Patient curpat = new Patient();
+        public static Patient curpat = new Patient();
         private static string hexcid;
+        public static bool patinfo = false;
         
         public Current()
         {
-            curpat.PatientID = 0;
+            
             curpat.Name = "no Patient";
+            /*curpat.PatientID = 0;
             curpat.Surname = "loaded";
             curpat.Date_of_birth = "empty pat obj was created right now";
             curpat.Socialsecurity = "no social security";
@@ -23,6 +25,7 @@ namespace PDMS
             curpat.Medication = "No meds";
             curpat.Weight = 1;
             curpat.Height = 1;
+            role = 0;*/
         }
 
         public int Role { get => role; set => role = value; }

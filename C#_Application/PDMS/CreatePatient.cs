@@ -58,9 +58,28 @@ namespace PDMS
                 bool sex = false;
                 if (Patient.malelist.Contains(this.textBox_gender.Text)) { sex = true; }
                 else if (Patient.femalelist.Contains(this.textBox_gender.Text)) { sex = false; }
-                else{throw new PDMS_Exception.InvalidGenderException(); }
+                else { throw new PDMS_Exception.InvalidGenderException(); }
+                
 
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", "0000031", this.textBox_dateofbirth.Text, sex, 0f, 0f, "0331");
+                if (textBox_socialsecum.Text.Length != 10)
+                {
+                    throw new PDMS_Exception.InvalidIdSocialSecurity();
+                }
+                if (textBox_ecardnumber.Text.Length != 20)
+                {
+                    throw new PDMS_Exception.InvalidEcardFormatException();
+                }
+
+                // add exceptions for heigth and weight!!
+                // add exceptions for heigth and weight!!
+                // add exceptions for heigth and weight!!
+                float weight = Convert.ToSingle(this.textBox_weight.Text);
+                float height = Convert.ToSingle(this.textBox_height.Text);
+
+
+                string Ecardnumber = this.textBox_ecardnumber.Text;
+                string social = this.textBox_socialsecum.Text;
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, Ecardnumber);
                 SQLConnector.SavePatient(patient);
                 MessageBox.Show("Patient Saved!", "Success!",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -76,6 +95,17 @@ namespace PDMS
             catch (PDMS_Exception.InvalidDateException)
             {
                 PDMS_Exception.InvalidDateException.ErrorMessage();
+                return;
+            }
+
+            catch (PDMS_Exception.InvalidEcardFormatException)
+            {
+                PDMS_Exception.InvalidEcardFormatException.ErrorMessage();
+                return;
+            }
+            catch (PDMS_Exception.InvalidIdSocialSecurity)
+            {
+                PDMS_Exception.InvalidIdSocialSecurity.ErrorMessage();
                 return;
             }
 
@@ -103,6 +133,15 @@ namespace PDMS
 
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReadCard rc = new ReadCard();
+            Patient pat = rc.readpatient();
+            textBox1.Text = Current.curpat.Name;
+            textBox1.ForeColor = System.Drawing.Color.Black;
+            textBox1.ReadOnly = true;
         }
     }
     }
