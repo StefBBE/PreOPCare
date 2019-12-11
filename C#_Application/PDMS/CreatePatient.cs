@@ -80,9 +80,17 @@ namespace PDMS
                 string Ecardnumber = this.textBox_ecardnumber.Text;
                 string social = this.textBox_socialsecum.Text;
                 Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, Ecardnumber);
-                SQLConnector.SavePatient(patient);
-                MessageBox.Show("Patient Saved!", "Success!",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    SQLConnector.SavePatient(patient);
+                    MessageBox.Show("Patient Saved!", "Success!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Patient NOT Saved! " + ex.Message, "Failure!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
 
