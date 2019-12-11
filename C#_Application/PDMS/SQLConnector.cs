@@ -8,7 +8,7 @@ namespace PDMS
     {
         static string connectionString = "server=127.0.0.1;database=PDMS;uid=root1;pwd=root1;";
 
-        public static int LogIn(string username, string password)
+        public static int LogIn(string username, string password) //returns integer containing role of the usern trying to og in. 0 means authentication failed
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
 
@@ -161,7 +161,7 @@ namespace PDMS
             }
             catch
             {
-                //return null;
+                return 0;
             }
         }
 

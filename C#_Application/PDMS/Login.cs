@@ -83,5 +83,22 @@ namespace PDMS
         {
 
         }
+
+        private void Login_button_Click(object sender, EventArgs e)
+        {
+            Current cur = new Current();
+            cur.Role = SQLConnector.LogIn(this.Username.Text, this.PasswordEnter.Text);
+            if (cur.Role != 0)
+            {
+                Form1 f1 = new Form1(cur);
+                f1.Show();
+                this.Hide();
+            }
+            else {
+                MessageBox.Show("LogIn failed!", "Name Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }
