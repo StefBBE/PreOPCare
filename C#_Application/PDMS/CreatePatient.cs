@@ -73,8 +73,31 @@ namespace PDMS
                 // add exceptions for heigth and weight!!
                 // add exceptions for heigth and weight!!
                 // add exceptions for heigth and weight!!
-                float weight = Convert.ToSingle(this.textBox_weight.Text);
-                float height = Convert.ToSingle(this.textBox_height.Text);
+                float weight = 0;
+                float height = 0;
+                if (this.textBox_weight.Text != "")
+                {
+                    if (Single.TryParse((this.textBox_weight.Text), out weight))
+                    {
+                        weight = Convert.ToSingle(this.textBox_weight.Text); //neccessary?
+                    }
+                    else { throw new PDMS_Exception.InvalidWeightException(); }
+                }
+
+                else { throw new PDMS_Exception.InvalidWeightException(); }
+
+                    
+                if (this.textBox_height.Text != "")
+                {
+                    if (Single.TryParse((this.textBox_height.Text), out height))
+                    {
+                        height = Convert.ToSingle(this.textBox_height.Text); //neccessary?
+                    }
+                    else { throw new PDMS_Exception.InvalidHeightException(); }
+                }
+
+                else { throw new PDMS_Exception.InvalidHeightException(); }
+
 
 
                 string Ecardnumber = this.textBox_ecardnumber.Text;
@@ -93,7 +116,16 @@ namespace PDMS
                 }
 
             }
-
+            catch(PDMS_Exception.InvalidWeightException)
+            {
+                PDMS_Exception.InvalidWeightException.ErrorMessage();
+                return;
+            }
+            catch(PDMS_Exception.InvalidHeightException)
+            {
+                PDMS_Exception.InvalidHeightException.ErrorMessage();
+                return;
+            }
             catch (PDMS_Exception.InvalidGenderException)
             {
                 PDMS_Exception.InvalidGenderException.ErrorMessage();
