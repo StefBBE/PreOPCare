@@ -82,6 +82,7 @@ namespace PDMS
             {
                 Console.WriteLine("Connection failed");
                 Console.WriteLine(e.ToString());
+                throw e;
 
             }
         }
@@ -148,7 +149,7 @@ namespace PDMS
                 int id;
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();
-                string query = String.Format("SELECT id FROM PDMS.patients WHERE (SocialSecurity = '{0}')", pat.Socialsecurity);
+                string query = String.Format("SELECT PatientID FROM PDMS.patients WHERE (SocialSecurity = '{0}')", pat.Socialsecurity);
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader myReader;
                 myReader = cmd.ExecuteReader();

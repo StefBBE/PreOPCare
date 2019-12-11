@@ -19,6 +19,7 @@ namespace PDMS
             InitializeComponent();
             // Patient testpat = new Patient(1, "blödmann", "asdf", "asdf", "asdf", "asd", true, 3f, 4f, "asdf");
             Current.curpat.PatientID = SQLConnector.GetIDFromSVN(Current.curpat);
+            Console.WriteLine(Current.curpat.PatientID);
             List<String> names = SQLConnector.GetECG_Name(Current.curpat); //Current.currpat??
             foreach (String name in names)
             {

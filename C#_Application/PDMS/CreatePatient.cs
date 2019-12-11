@@ -65,28 +65,14 @@ namespace PDMS
                 {
                     throw new PDMS_Exception.InvalidIdSocialSecurity();
                 }
-                if (textBox_ecardnumber.Text.Length != 20)
-                {
-                    throw new PDMS_Exception.InvalidEcardFormatException();
-                }
+                
 
                 // add exceptions for heigth and weight!!
                 // add exceptions for heigth and weight!!
                 // add exceptions for heigth and weight!!
                 float weight = 0;
                 float height = 0;
-                if (this.textBox_weight.Text != "")
-                {
-                    if (Single.TryParse((this.textBox_weight.Text), out weight))
-                    {
-                        weight = Convert.ToSingle(this.textBox_weight.Text); //neccessary?
-                    }
-                    else { throw new PDMS_Exception.InvalidWeightException(); }
-                }
 
-                else { throw new PDMS_Exception.InvalidWeightException(); }
-
-                    
                 if (this.textBox_height.Text != "")
                 {
                     if (Single.TryParse((this.textBox_height.Text), out height))
@@ -98,6 +84,22 @@ namespace PDMS
 
                 else { throw new PDMS_Exception.InvalidHeightException(); }
 
+                if (this.textBox_weight.Text != "")
+                {
+                    if (Single.TryParse((this.textBox_weight.Text), out weight))
+                    {
+                        weight = Convert.ToSingle(this.textBox_weight.Text); //neccessary?
+                    }
+                    else { throw new PDMS_Exception.InvalidWeightException(); }
+                }
+
+                else { throw new PDMS_Exception.InvalidWeightException(); }
+
+
+                if (textBox_ecardnumber.Text.Length != 20)
+                {
+                    throw new PDMS_Exception.InvalidEcardFormatException();
+                }
 
 
                 string Ecardnumber = this.textBox_ecardnumber.Text;
