@@ -6,7 +6,7 @@ namespace PDMS
 {
     public partial class SQLConnector
     {
-        static string connectionString = "server=127.0.0.1;database=PDMS;uid=monty;pwd=pass1;";
+        static string connectionString = "server=127.0.0.1;database=PDMS;uid=root1;pwd=root1;";
 
         public static int LogIn(string username, string password)
         {
@@ -139,6 +139,30 @@ namespace PDMS
 
 
             
+        }
+
+        public static int GetIDFromSVN(Patient pat)
+        {
+            try
+            {
+                int id;
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = String.Format("SELECT id FROM PDMS.patients WHERE (SocialSecurity = '{0}')", pat.Socialsecurity);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader myReader;
+                myReader = cmd.ExecuteReader();
+                myReader.Read();
+                id = Convert.ToInt32(myReader[0]);
+
+                connection.Close();
+                return id;
+
+            }
+            catch
+            {
+                //return null;
+            }
         }
 
 
