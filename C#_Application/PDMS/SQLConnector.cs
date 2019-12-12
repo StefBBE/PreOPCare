@@ -14,14 +14,23 @@ namespace PDMS
 
             try
             {
+                
                 connection.Open();
                 Console.WriteLine("Connection Open!");
-                string query = String.Format("SELECT Role FROM Users WHERE Username=\'{0}\' AND Password=\'{1}\'", username, password);
+                string query = String.Format("SELECT * FROM Users WHERE (Username=\'{0}\' AND Password=\'{1}\');", username, password);
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader rdr = cmd.ExecuteReader();
+
                 rdr.Read();
-                int role = Convert.ToInt32(rdr[0]);
-                rdr.Close();
+                Console.WriteLine(rdr.GetSByte("Role"));
+
+                //int role  = Convert.ToInt16(cmd.ExecuteScalar());
+
+
+                // rdr.Read();
+                //int role = Convert.ToInt16(rdr[0]);
+                // rdr.Close();
+                int role = 0;
                 connection.Close();
                 return role;
 
