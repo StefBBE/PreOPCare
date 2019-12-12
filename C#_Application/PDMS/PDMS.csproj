@@ -69,6 +69,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNurse.Designer.cs">
+      <DependentUpon>FormNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPatient.Designer.cs">
+      <DependentUpon>FormPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhysician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhysician.Designer.cs">
+      <DependentUpon>FormPhysician.cs</DependentUpon>
+    </Compile>
     <Compile Include="PDMS_Exception.cs" />
     <Compile Include="User.cs" />
     <Compile Include="CreatePatient.cs">
@@ -115,6 +133,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNurse.resx">
+      <DependentUpon>FormNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPatient.resx">
+      <DependentUpon>FormPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhysician.resx">
+      <DependentUpon>FormPhysician.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientInfo.resx">
       <DependentUpon>PatientInfo.cs</DependentUpon>
