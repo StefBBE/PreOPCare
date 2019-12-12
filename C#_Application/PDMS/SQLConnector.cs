@@ -6,7 +6,7 @@ namespace PDMS
 {
     public partial class SQLConnector
     {
-        static string connectionString = "server=127.0.0.1;database=PDMS;uid=monty;pwd=pass1;";
+        static string connectionString = "server=127.0.0.1;database=PDMS;uid=root1;pwd=root1;";
 
         public static int LogIn(string username, string password)
         {
