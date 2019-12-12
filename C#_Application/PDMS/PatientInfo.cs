@@ -119,10 +119,12 @@ namespace PDMS
 
         private void ECG_Display_OnClick(object sender, EventArgs e)
         {
+
             panel1.Hide();
             OpenFormInPanel(new ECG());
             
             // ECG fenster �ffnen?
+
 
         }
 

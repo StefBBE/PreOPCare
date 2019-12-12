@@ -83,5 +83,47 @@ namespace PDMS
         {
 
         }
+
+        private void Login_button_Click(object sender, EventArgs e)
+        {
+            Current cur = new Current();
+            cur.Role = SQLConnector.LogIn(this.Username.Text, this.PasswordEnter.Text);
+            if (cur.Role != 0) //delte in new ui 
+           {
+               Form1 f1 = new Form1(cur);
+               f1.Show();
+               this.Hide();
+           }
+           /*if (cur.Role == 1) //admin
+           {
+               Form1 f1 = new Form1(cur);
+               f1.Show();
+               this.Hide();
+           }
+           else if (cur.Role == 2) //physician
+           {
+               Form1 f1 = new FormPhysician(cur);
+               f1.Show();
+               this.Hide();
+           }
+           else if (cur.Role == 3) // nurse
+           {
+               Form1 f1 = new FormNurse(cur);
+               f1.Show();
+               this.Hide();
+           }
+
+           else if (cur.Role == 4) // patient
+           {
+               Form1 f1 = new FormPatient(cur);
+               f1.Show();
+               this.Hide();
+           }
+           else if (cur.Role == 0){
+               MessageBox.Show("LogIn failed!", "Name Error",
+               MessageBoxButtons.OK, MessageBoxIcon.Error);
+           }*/
+
+        }
     }
 }

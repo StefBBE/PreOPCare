@@ -8,7 +8,7 @@ namespace PDMS
     {
         static string connectionString = "server=127.0.0.1;database=PDMS;uid=root1;pwd=root1;";
 
-        public static int LogIn(string username, string password)
+        public static int LogIn(string username, string password) //returns integer containing role of the usern trying to og in. 0 means authentication failed
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
 
@@ -82,6 +82,7 @@ namespace PDMS
             {
                 Console.WriteLine("Connection failed");
                 Console.WriteLine(e.ToString());
+                throw e;
 
             }
         }
@@ -139,6 +140,30 @@ namespace PDMS
 
 
             
+        }
+
+        public static int GetIDFromSVN(Patient pat)
+        {
+            try
+            {
+                int id;
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = String.Format("SELECT PatientID FROM PDMS.patients WHERE (SocialSecurity = '{0}')", pat.Socialsecurity);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader myReader;
+                myReader = cmd.ExecuteReader();
+                myReader.Read();
+                id = Convert.ToInt32(myReader[0]);
+
+                connection.Close();
+                return id;
+
+            }
+            catch
+            {
+                return 0;
+            }
         }
 
 

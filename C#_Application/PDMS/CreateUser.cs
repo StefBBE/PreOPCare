@@ -66,9 +66,16 @@ namespace PDMS
 
 
                 User user = new User(0, role, this.textBox_name.Text, this.textBox_surname.Text, this.textBox_username.Text, this.textBox_password.Text, ecardnumber, idcardnumber, true);
-                SQLConnector.SaveUser(user);
-                MessageBox.Show("User Saved!", "Success!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    SQLConnector.SaveUser(user);
+
+                    MessageBox.Show("User Saved!", "Success!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch(Exception ex ) {
+                    MessageBox.Show("User not Saved! " + ex.Message , "Failure!",
+      MessageBoxButtons.OK, MessageBoxIcon.Error);}
             }
 
             catch (PDMS_Exception.InvalidDateException)

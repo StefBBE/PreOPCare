@@ -97,6 +97,7 @@
             this.Login_button.TabIndex = 8;
             this.Login_button.Text = "Login";
             this.Login_button.UseVisualStyleBackColor = false;
+            this.Login_button.Click += new System.EventHandler(this.Login_button_Click);
             // 
             // IDCard_button
             // 
