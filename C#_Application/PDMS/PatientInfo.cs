@@ -18,9 +18,9 @@ namespace PDMS
         public PatientInfo(Current cur)
         {
 
-            bool brk = false;
+            bool brk = true;
             bool docdec = false;
-            while (!Current.patinfo && !brk) 
+            while (!Current.patinfo && brk && !docdec) 
             {
 
                 if (cur.Role==2&&!docdec)
@@ -56,7 +56,7 @@ namespace PDMS
                         if (result == DialogResult.No)
                         {
                             // cancel the closure of the form.
-                            brk = true;
+                            brk = false;
                         }
                     }
             }

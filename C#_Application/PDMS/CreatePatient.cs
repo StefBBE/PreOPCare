@@ -104,7 +104,8 @@ namespace PDMS
 
                 string Ecardnumber = this.textBox_ecardnumber.Text;
                 string social = this.textBox_socialsecum.Text;
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, Ecardnumber);
+                HexConverter hc = new HexConverter();
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hc.converter(Ecardnumber));
                 try
                 {
                     SQLConnector.SavePatient(patient);

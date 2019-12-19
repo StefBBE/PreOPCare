@@ -72,6 +72,7 @@ namespace PDMS
         private void IDCard_button_Click(object sender, EventArgs e)
         {
             Current cur = new Current();
+            cur.Role = 2;
             Form1 f1 = new Form1(cur);
             f1.Show();
             this.Hide();
