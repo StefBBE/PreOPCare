@@ -13,6 +13,7 @@ namespace PDMS
 {
     public partial class CreatePatient : Form
     {
+        string filepath;
         public CreatePatient()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace PDMS
 
         private void Save_Button_OnClick(object sender, EventArgs e)
         {
-
+            
 
             try
             {
@@ -111,10 +112,12 @@ namespace PDMS
                 MessageBox.Show("Patient Saved!", "Success!",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 */
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, Ecardnumber); 
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hmycin); 
                 try
                 {
                     SQLConnector.SavePatient(patient);
+                    
+                    SQLConnector.SaveECG(filepath);
                     MessageBox.Show("Patient Saved!", "Success!",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -123,6 +126,8 @@ namespace PDMS
                     MessageBox.Show("Patient NOT Saved! " + ex.Message, "Failure!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+
 
 
             }
@@ -201,6 +206,13 @@ namespace PDMS
             textBox_height.Text = Convert.ToString(Current.curpat.Height);
             textBox_weight.Text = Convert.ToString(Current.curpat.Weight);
             textBox_ecardnumber.Text = Convert.ToString(Current.curpat.Ecardnumber);
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            FileDialog dialog = new FileDialog();
+            dialog.BrowseButton_Click(sender,e);
+            filepath = dialog.filepath;
         }
     }
     }

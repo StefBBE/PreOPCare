@@ -151,6 +151,54 @@ namespace PDMS
             
         }
 
+        public static void SaveECG(String filepath)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+           
+            try
+            {
+                connection.Open();
+                Console.WriteLine("Connection Open!");
+
+                string query = String.Format("INSERT INTO PDMS.ecg (Name,Filepath,PatientID) VALUES (\'{0}\',\'{1}\',{2})", filepath, filepath, lastID());
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Connection failed");
+                Console.WriteLine(e.ToString());
+                throw e;
+
+            }
+
+        }
+        public static int lastID()
+        {
+            try
+            {
+                int id;
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = String.Format("SELECT MAX(PatientID) FROM patients;");
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader myReader;
+                myReader = cmd.ExecuteReader();
+                myReader.Read();
+                id = Convert.ToInt32(myReader[0]);
+
+                connection.Close();
+                return id;
+
+            }
+            catch
+            {
+                return 0;
+            }
+        }
         public static int GetIDFromSVN(Patient pat)
         {
             try
