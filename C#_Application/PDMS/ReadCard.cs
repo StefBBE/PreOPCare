@@ -34,7 +34,9 @@ namespace PDMS
                 string MySvNr = status["baseContact"]["cardData"]["nummer"].ToString();
                 bool sex = false;
                 if (MyGeschlecht == "M") { sex = true; }
+
                 Patient found = new Patient(0, MyVorname, MyNachname, "", MySvNr, MyGeburtsdatum, sex, 0, 0,HMyCin);
+
 
                 Current.patinfo = true;
 

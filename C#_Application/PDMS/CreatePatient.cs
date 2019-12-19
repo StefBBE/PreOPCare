@@ -13,6 +13,7 @@ namespace PDMS
 {
     public partial class CreatePatient : Form
     {
+        string filepath;
         public CreatePatient()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace PDMS
 
         private void Save_Button_OnClick(object sender, EventArgs e)
         {
-
+            
 
             try
             {
@@ -102,13 +103,19 @@ namespace PDMS
                 }
 
 
-                string Ecardnumber = this.textBox_ecardnumber.Text;
+                HexConverter hc = new HexConverter();
+                string hmycin = hc.converter(textBox_ecardnumber.Text);
                 string social = this.textBox_socialsecum.Text;
+
                 HexConverter hc = new HexConverter();
                 Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hc.converter(Ecardnumber));
+
+
                 try
                 {
                     SQLConnector.SavePatient(patient);
+                    
+                    SQLConnector.SaveECG(filepath);
                     MessageBox.Show("Patient Saved!", "Success!",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -117,6 +124,9 @@ namespace PDMS
                     MessageBox.Show("Patient NOT Saved! " + ex.Message, "Failure!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+
+
 
             }
             catch(PDMS_Exception.InvalidWeightException)
@@ -180,10 +190,13 @@ namespace PDMS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Current cur = new Current();
             ReadCard rc = new ReadCard();
+
             Patient pat = rc.readpatient();
             Current.curpat = rc.readpatient();
             Current cur = new Current();
+
             textBox_name.Text = Current.curpat.Name;
             textBox_name.ForeColor = System.Drawing.Color.Black;
             textBox_name.ReadOnly = true;
@@ -195,6 +208,15 @@ namespace PDMS
             textBox_height.Text = Convert.ToString(Current.curpat.Height);
             textBox_weight.Text = Convert.ToString(Current.curpat.Weight);
             textBox_ecardnumber.Text = Convert.ToString(Current.curpat.Ecardnumber);
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            FileDialog dialog = new FileDialog();
+            dialog.BrowseButton_Click(sender,e);
+            filepath = dialog.filepath;
+
         }
     }
     }
