@@ -107,8 +107,8 @@ namespace PDMS
                 string hmycin = hc.converter(textBox_ecardnumber.Text);
                 string social = this.textBox_socialsecum.Text;
 
-                HexConverter hc = new HexConverter();
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hc.converter(Ecardnumber));
+          
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hmycin);
 
 
                 try
@@ -195,7 +195,7 @@ namespace PDMS
 
             Patient pat = rc.readpatient();
             Current.curpat = rc.readpatient();
-            Current cur = new Current();
+            
 
             textBox_name.Text = Current.curpat.Name;
             textBox_name.ForeColor = System.Drawing.Color.Black;

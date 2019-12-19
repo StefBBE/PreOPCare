@@ -130,6 +130,7 @@ namespace PDMS
                this.Hide();
            }
            else if (cur.Role == 0){
+                Console.WriteLine(this.Username.Text+this.PasswordEnter.Text+cur.Role);
                MessageBox.Show("LogIn failed!", "Name Error",
                MessageBoxButtons.OK, MessageBoxIcon.Error);
            }

@@ -22,7 +22,7 @@ namespace PDMS
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 rdr.Read();
-                Console.WriteLine(rdr.GetSByte("Role"));
+
 
                 //int role  = Convert.ToInt16(cmd.ExecuteScalar());
 
@@ -30,7 +30,7 @@ namespace PDMS
                 // rdr.Read();
                 //int role = Convert.ToInt16(rdr[0]);
                 // rdr.Close();
-                int role = 0;
+                int role = rdr.GetSByte("Role");
                 connection.Close();
                 return role;
 
