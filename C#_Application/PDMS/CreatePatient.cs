@@ -106,13 +106,11 @@ namespace PDMS
                 HexConverter hc = new HexConverter();
                 string hmycin = hc.converter(textBox_ecardnumber.Text);
                 string social = this.textBox_socialsecum.Text;
-/* Stephan
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hmycin);
-                SQLConnector.SavePatient(patient);
-                MessageBox.Show("Patient Saved!", "Success!",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-*/
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hmycin); 
+
+                HexConverter hc = new HexConverter();
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hc.converter(Ecardnumber));
+
+
                 try
                 {
                     SQLConnector.SavePatient(patient);
@@ -194,7 +192,11 @@ namespace PDMS
         {
             Current cur = new Current();
             ReadCard rc = new ReadCard();
+
+            Patient pat = rc.readpatient();
             Current.curpat = rc.readpatient();
+            Current cur = new Current();
+
             textBox_name.Text = Current.curpat.Name;
             textBox_name.ForeColor = System.Drawing.Color.Black;
             textBox_name.ReadOnly = true;
@@ -206,6 +208,7 @@ namespace PDMS
             textBox_height.Text = Convert.ToString(Current.curpat.Height);
             textBox_weight.Text = Convert.ToString(Current.curpat.Weight);
             textBox_ecardnumber.Text = Convert.ToString(Current.curpat.Ecardnumber);
+
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -213,6 +216,7 @@ namespace PDMS
             FileDialog dialog = new FileDialog();
             dialog.BrowseButton_Click(sender,e);
             filepath = dialog.filepath;
+
         }
     }
     }

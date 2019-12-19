@@ -216,7 +216,7 @@ namespace PDMS
             // 
             this.textBox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(180)))), ((int)(((byte)(183)))));
             this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox_name.ForeColor = System.Drawing.Color.Black;
             this.textBox_name.Location = new System.Drawing.Point(151, 41);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(251, 20);

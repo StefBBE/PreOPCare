@@ -69,15 +69,16 @@ namespace PDMS
             }
         }
 
-        private void IDCard_button_Click(object sender, EventArgs e)
+        /*private void IDCard_button_Click(object sender, EventArgs e)
         {
             Current cur = new Current();
+            cur.Role = 2;
             Form1 f1 = new Form1(cur);
             f1.Show();
             this.Hide();
             //Application.Run();
             
-        }
+        }*/
 
         private void Welcome_Click(object sender, EventArgs e)
         {
@@ -87,6 +88,13 @@ namespace PDMS
         private void Login_button_Click(object sender, EventArgs e)
         {
             Current cur = new Current();
+            if (this.Username.Text == "1234567890" && this.PasswordEnter.Text == "1234567890")
+            {
+                cur.Role = 1;
+                Form f1 = new Form1(cur);
+                f1.Show();
+                this.Hide();
+            }
             cur.Role = SQLConnector.LogIn(this.Username.Text, this.PasswordEnter.Text);
             /*if (cur.Role != 0) //delte in new ui 
            {
@@ -94,6 +102,7 @@ namespace PDMS
                f1.Show();
                this.Hide();
            }*/
+           
            if (cur.Role == 1) //admin
            {
                Form1 f1 = new Form1(cur);

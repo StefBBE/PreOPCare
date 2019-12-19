@@ -34,7 +34,6 @@
             this.PasswordEnter = new System.Windows.Forms.TextBox();
             this.Username = new System.Windows.Forms.TextBox();
             this.Login_button = new System.Windows.Forms.Button();
-            this.IDCard_button = new System.Windows.Forms.Button();
             this.ECard_button = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Password = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.panel1.Controls.Add(this.PasswordEnter);
             this.panel1.Controls.Add(this.Username);
             this.panel1.Controls.Add(this.Login_button);
-            this.panel1.Controls.Add(this.IDCard_button);
             this.panel1.Controls.Add(this.ECard_button);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.Password);
@@ -71,7 +69,7 @@
             this.PasswordEnter.Location = new System.Drawing.Point(44, 249);
             this.PasswordEnter.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordEnter.Name = "PasswordEnter";
-            this.PasswordEnter.Size = new System.Drawing.Size(258, 30);
+            this.PasswordEnter.Size = new System.Drawing.Size(258, 26);
             this.PasswordEnter.TabIndex = 10;
             // 
             // Username
@@ -82,7 +80,7 @@
             this.Username.Location = new System.Drawing.Point(44, 163);
             this.Username.Margin = new System.Windows.Forms.Padding(4);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(258, 30);
+            this.Username.Size = new System.Drawing.Size(258, 26);
             this.Username.TabIndex = 9;
             // 
             // Login_button
@@ -98,20 +96,6 @@
             this.Login_button.Text = "Login";
             this.Login_button.UseVisualStyleBackColor = false;
             this.Login_button.Click += new System.EventHandler(this.Login_button_Click);
-            // 
-            // IDCard_button
-            // 
-            this.IDCard_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.IDCard_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(129)))), ((int)(((byte)(133)))));
-            this.IDCard_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.IDCard_button.Location = new System.Drawing.Point(55, 524);
-            this.IDCard_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.IDCard_button.Name = "IDCard_button";
-            this.IDCard_button.Size = new System.Drawing.Size(221, 53);
-            this.IDCard_button.TabIndex = 5;
-            this.IDCard_button.Text = "ID-Card";
-            this.IDCard_button.UseVisualStyleBackColor = false;
-            this.IDCard_button.Click += new System.EventHandler(this.IDCard_button_Click);
             // 
             // ECard_button
             // 
@@ -133,7 +117,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(93, 383);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 25);
+            this.label4.Size = new System.Drawing.Size(116, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "or connect with";
             // 
@@ -143,7 +127,7 @@
             this.Password.AutoSize = true;
             this.Password.Location = new System.Drawing.Point(39, 211);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(98, 25);
+            this.Password.Size = new System.Drawing.Size(78, 20);
             this.Password.TabIndex = 2;
             this.Password.Text = "Password";
             // 
@@ -153,7 +137,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(39, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 25);
+            this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "User";
             // 
@@ -164,14 +148,14 @@
             this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Welcome.Location = new System.Drawing.Point(109, 56);
             this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(115, 29);
+            this.Welcome.Size = new System.Drawing.Size(91, 24);
             this.Welcome.TabIndex = 0;
             this.Welcome.Text = "Welcome";
             this.Welcome.Click += new System.EventHandler(this.Welcome_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -193,7 +177,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Login_button;
-        private System.Windows.Forms.Button IDCard_button;
         private System.Windows.Forms.Button ECard_button;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Password;
