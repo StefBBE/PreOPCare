@@ -54,6 +54,31 @@ namespace PDMS
             }
 
         }
+        public class InvalidWeightException : PDMS_Exception
+        {
+            public InvalidWeightException()
+            {
+            }
+            public static void ErrorMessage()
+            {
+                MessageBox.Show("Please Enter a correct weight", "Weight Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        public class InvalidHeightException : PDMS_Exception
+        {
+            public InvalidHeightException()
+            {
+            }
+            public static void ErrorMessage()
+            {
+                MessageBox.Show("Please Enter a correct height", "Height Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
 
         public class NoCredentialsException : PDMS_Exception
         {

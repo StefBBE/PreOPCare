@@ -33,10 +33,7 @@ namespace PDMS
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
-
             this.loadpatbut = new System.Windows.Forms.Button();
-
-
             this.SuspendLayout();
             // 
             // listBox1
@@ -46,11 +43,10 @@ namespace PDMS
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
+            this.listBox1.ItemHeight = 18;
             this.listBox1.Location = new System.Drawing.Point(189, 197);
             this.listBox1.Name = "listBox1";
-            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.One;
-            this.listBox1.Size = new System.Drawing.Size(512, 240);
+            this.listBox1.Size = new System.Drawing.Size(512, 234);
             this.listBox1.TabIndex = 12;
             // 
             // txt_search
@@ -61,7 +57,7 @@ namespace PDMS
             this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_search.Location = new System.Drawing.Point(189, 127);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(356, 21);
+            this.txt_search.Size = new System.Drawing.Size(356, 27);
             this.txt_search.TabIndex = 13;
             // 
             // label1
@@ -72,7 +68,7 @@ namespace PDMS
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Location = new System.Drawing.Point(196, 470);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "Status";
             // 
@@ -90,16 +86,11 @@ namespace PDMS
             this.btn_search.UseVisualStyleBackColor = false;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
-
-
             // loadpatbut
             // 
-            //this.loadpatbut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.loadpatbut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loadpatbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(129)))), ((int)(((byte)(133)))));
-           // this.loadpatbut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.loadpatbut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            //this.loadpatbut.ForeColor = System.Drawing.Color.Black;
             this.loadpatbut.Location = new System.Drawing.Point(598, 467);
             this.loadpatbut.Name = "loadpatbut";
             this.loadpatbut.Size = new System.Drawing.Size(102, 40);
@@ -110,15 +101,12 @@ namespace PDMS
             // 
             // SearchPatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(890, 628);
-
-
             this.Controls.Add(this.loadpatbut);
-
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_search);
