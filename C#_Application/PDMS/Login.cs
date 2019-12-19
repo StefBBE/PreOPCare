@@ -91,7 +91,7 @@ namespace PDMS
             if (this.Username.Text == "1234567890" && this.PasswordEnter.Text == "1234567890")
             {
                 cur.Role = 1;
-                Form1 f1 = new Form1(cur);
+                Form f1 = new Form1(cur);
                 f1.Show();
                 this.Hide();
             }
