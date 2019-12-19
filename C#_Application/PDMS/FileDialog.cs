@@ -11,7 +11,7 @@ namespace PDMS
     class FileDialog
     {
         public string filepath;
-        private void BrowseButton_Click(object sender, EventArgs e)
+        public void BrowseButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
@@ -29,7 +29,11 @@ namespace PDMS
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string filepath = Path.GetDirectoryName(openFileDialog1.FileName);
+                
+                //string filepath = Path.GetDirectoryName(openFileDialog1.FileName);
+                this.filepath = Path.GetFileName(openFileDialog1.FileName);
+                string[] names = filepath.Split('.');
+                this.filepath = names[0];
                 System.Windows.Forms.MessageBox.Show(filepath);
             }
         }

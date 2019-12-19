@@ -30,13 +30,13 @@ namespace PDMS
                 string MyNachname = status["baseContact"]["cardData"]["nachname"].ToString();
                 string MyGeburtsdatum = status["baseContact"]["cardData"]["geburtsdatum"].ToString();
                 string MyGeschlecht = status["baseContact"]["cardData"]["geschlecht"].ToString();
-                string MyCin = status["baseContact"]["cardData"]["cin"].ToString();
+                string HMyCin = status["baseContact"]["cardData"]["cin"].ToString();
                 string MySvNr = status["baseContact"]["cardData"]["nummer"].ToString();
                 bool sex = false;
                 if (MyGeschlecht == "M") { sex = true; }
-                HexConverter hc = new HexConverter();
-                String HMyCin = hc.converter(MyCin);
+
                 Patient found = new Patient(0, MyVorname, MyNachname, "", MySvNr, MyGeburtsdatum, sex, 0, 0,HMyCin);
+
 
                 Current.patinfo = true;
 

@@ -18,9 +18,9 @@ namespace PDMS
         public PatientInfo(Current cur)
         {
 
-            bool brk = false;
+            bool brk = true;
             bool docdec = false;
-            while (!Current.patinfo && !brk) 
+            while (!Current.patinfo && brk && !docdec) 
             {
 
                 if (cur.Role==2&&!docdec)
@@ -56,7 +56,7 @@ namespace PDMS
                         if (result == DialogResult.No)
                         {
                             // cancel the closure of the form.
-                            brk = true;
+                            brk = false;
                         }
                     }
             }
@@ -98,15 +98,15 @@ namespace PDMS
         {
 
         }
-        private void OpenFormInPatientInfo(Object Formhijo)
+        private void OpenFormInPanel(Object Formhijo)
         {
-            if (this.panel1.Controls.Count > 0)
-                this.panel1.Controls.RemoveAt(0);
+            if (this.panel2.Controls.Count > 0)
+                this.panel2.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(fh);
-            this.panel1.Tag = fh;
+            this.panel2.Controls.Add(fh);
+            this.panel2.Tag = fh;
             fh.Show();
         }
 
@@ -119,12 +119,21 @@ namespace PDMS
 
         private void ECG_Display_OnClick(object sender, EventArgs e)
         {
+
+            panel1.Hide();
+            OpenFormInPanel(new ECG());
             
             // ECG fenster �ffnen?
+
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PatientInfo_Load(object sender, EventArgs e)
         {
 
         }

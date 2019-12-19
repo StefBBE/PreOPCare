@@ -13,6 +13,7 @@ namespace PDMS
 {
     public partial class CreatePatient : Form
     {
+        string filepath;
         public CreatePatient()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace PDMS
 
         private void Save_Button_OnClick(object sender, EventArgs e)
         {
-
+            
 
             try
             {
@@ -65,27 +66,79 @@ namespace PDMS
                 {
                     throw new PDMS_Exception.InvalidIdSocialSecurity();
                 }
+                
+
+                // add exceptions for heigth and weight!!
+                // add exceptions for heigth and weight!!
+                // add exceptions for heigth and weight!!
+                float weight = 0;
+                float height = 0;
+
+                if (this.textBox_height.Text != "")
+                {
+                    if (Single.TryParse((this.textBox_height.Text), out height))
+                    {
+                        height = Convert.ToSingle(this.textBox_height.Text); //neccessary?
+                    }
+                    else { throw new PDMS_Exception.InvalidHeightException(); }
+                }
+
+                else { throw new PDMS_Exception.InvalidHeightException(); }
+
+                if (this.textBox_weight.Text != "")
+                {
+                    if (Single.TryParse((this.textBox_weight.Text), out weight))
+                    {
+                        weight = Convert.ToSingle(this.textBox_weight.Text); //neccessary?
+                    }
+                    else { throw new PDMS_Exception.InvalidWeightException(); }
+                }
+
+                else { throw new PDMS_Exception.InvalidWeightException(); }
+
+
                 if (textBox_ecardnumber.Text.Length != 20)
                 {
                     throw new PDMS_Exception.InvalidEcardFormatException();
                 }
 
-                // add exceptions for heigth and weight!!
-                // add exceptions for heigth and weight!!
-                // add exceptions for heigth and weight!!
-                float weight = Convert.ToSingle(this.textBox_weight.Text);
-                float height = Convert.ToSingle(this.textBox_height.Text);
 
-
-                string Ecardnumber = this.textBox_ecardnumber.Text;
+                HexConverter hc = new HexConverter();
+                string hmycin = hc.converter(textBox_ecardnumber.Text);
                 string social = this.textBox_socialsecum.Text;
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, Ecardnumber);
-                SQLConnector.SavePatient(patient);
-                MessageBox.Show("Patient Saved!", "Success!",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+          
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hmycin);
+
+
+                try
+                {
+                    SQLConnector.SavePatient(patient);
+                    
+                    SQLConnector.SaveECG(filepath);
+                    MessageBox.Show("Patient Saved!", "Success!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Patient NOT Saved! " + ex.Message, "Failure!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+
 
             }
-
+            catch(PDMS_Exception.InvalidWeightException)
+            {
+                PDMS_Exception.InvalidWeightException.ErrorMessage();
+                return;
+            }
+            catch(PDMS_Exception.InvalidHeightException)
+            {
+                PDMS_Exception.InvalidHeightException.ErrorMessage();
+                return;
+            }
             catch (PDMS_Exception.InvalidGenderException)
             {
                 PDMS_Exception.InvalidGenderException.ErrorMessage();
@@ -137,11 +190,33 @@ namespace PDMS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Current cur = new Current();
             ReadCard rc = new ReadCard();
+
             Patient pat = rc.readpatient();
-            //textBox1.Text = Current.curpat.Name;
-            //textBox1.ForeColor = System.Drawing.Color.Black;
-            //textBox1.ReadOnly = true;
+            Current.curpat = rc.readpatient();
+            
+
+            textBox_name.Text = Current.curpat.Name;
+            textBox_name.ForeColor = System.Drawing.Color.Black;
+            textBox_name.ReadOnly = true;
+            textBox_surname.Text = Current.curpat.Surname;
+            textBox_dateofbirth.Text = Current.curpat.Date_of_birth;
+            textBox_gender.Text = cur.curpatsexg();
+            textBox_medication.Text = Current.curpat.Medication;
+            textBox_socialsecum.Text = Current.curpat.Socialsecurity;
+            textBox_height.Text = Convert.ToString(Current.curpat.Height);
+            textBox_weight.Text = Convert.ToString(Current.curpat.Weight);
+            textBox_ecardnumber.Text = Convert.ToString(Current.curpat.Ecardnumber);
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            FileDialog dialog = new FileDialog();
+            dialog.BrowseButton_Click(sender,e);
+            filepath = dialog.filepath;
+
         }
     }
     }
