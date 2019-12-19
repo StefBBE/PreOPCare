@@ -102,9 +102,16 @@ namespace PDMS
                 }
 
 
-                string Ecardnumber = this.textBox_ecardnumber.Text;
+                HexConverter hc = new HexConverter();
+                string hmycin = hc.converter(textBox_ecardnumber.Text);
                 string social = this.textBox_socialsecum.Text;
-                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, Ecardnumber);
+/* Stephan
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, hmycin);
+                SQLConnector.SavePatient(patient);
+                MessageBox.Show("Patient Saved!", "Success!",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+*/
+                Patient patient = new Patient(0, this.textBox_name.Text, this.textBox_surname.Text, "", social, this.textBox_dateofbirth.Text, sex, height, weight, Ecardnumber); 
                 try
                 {
                     SQLConnector.SavePatient(patient);
@@ -116,6 +123,7 @@ namespace PDMS
                     MessageBox.Show("Patient NOT Saved! " + ex.Message, "Failure!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
 
             }
             catch(PDMS_Exception.InvalidWeightException)
@@ -179,11 +187,20 @@ namespace PDMS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Current cur = new Current();
             ReadCard rc = new ReadCard();
-            Patient pat = rc.readpatient();
-            //textBox1.Text = Current.curpat.Name;
-            //textBox1.ForeColor = System.Drawing.Color.Black;
-            //textBox1.ReadOnly = true;
+            Current.curpat = rc.readpatient();
+            textBox_name.Text = Current.curpat.Name;
+            textBox_name.ForeColor = System.Drawing.Color.Black;
+            textBox_name.ReadOnly = true;
+            textBox_surname.Text = Current.curpat.Surname;
+            textBox_dateofbirth.Text = Current.curpat.Date_of_birth;
+            textBox_gender.Text = cur.curpatsexg();
+            textBox_medication.Text = Current.curpat.Medication;
+            textBox_socialsecum.Text = Current.curpat.Socialsecurity;
+            textBox_height.Text = Convert.ToString(Current.curpat.Height);
+            textBox_weight.Text = Convert.ToString(Current.curpat.Weight);
+            textBox_ecardnumber.Text = Convert.ToString(Current.curpat.Ecardnumber);
         }
     }
     }
