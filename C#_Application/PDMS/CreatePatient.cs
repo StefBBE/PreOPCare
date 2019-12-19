@@ -182,9 +182,19 @@ namespace PDMS
         {
             ReadCard rc = new ReadCard();
             Patient pat = rc.readpatient();
-            //textBox1.Text = Current.curpat.Name;
-            //textBox1.ForeColor = System.Drawing.Color.Black;
-            //textBox1.ReadOnly = true;
+            Current.curpat = rc.readpatient();
+            Current cur = new Current();
+            textBox_name.Text = Current.curpat.Name;
+            textBox_name.ForeColor = System.Drawing.Color.Black;
+            textBox_name.ReadOnly = true;
+            textBox_surname.Text = Current.curpat.Surname;
+            textBox_dateofbirth.Text = Current.curpat.Date_of_birth;
+            textBox_gender.Text = cur.curpatsexg();
+            textBox_medication.Text = Current.curpat.Medication;
+            textBox_socialsecum.Text = Current.curpat.Socialsecurity;
+            textBox_height.Text = Convert.ToString(Current.curpat.Height);
+            textBox_weight.Text = Convert.ToString(Current.curpat.Weight);
+            textBox_ecardnumber.Text = Convert.ToString(Current.curpat.Ecardnumber);
         }
     }
     }
